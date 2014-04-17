@@ -6,12 +6,15 @@ public class WebNode
 {
 
 	private URL url;
-	private ArrayList<WebNode> links;
+	private ArrayList<WebNode> outgoingNeighbors;//incomingNeighbors
+	private ArrayList<WebNode> incomingNeighbors; // TODO:update class
+	double auth;
+	double hub;
 
 	public WebNode()
 	{
 		this.url = null;
-		this.links = null;
+		this.outgoingNeighbors = null;
 	}
 
 	public WebNode(String url)
@@ -19,7 +22,7 @@ public class WebNode
 		try
 		{
 			this.url = new URL(url);
-			this.links = new ArrayList<WebNode>();
+			this.outgoingNeighbors = new ArrayList<WebNode>();
 		}
 		catch (MalformedURLException e)
 		{
@@ -31,7 +34,7 @@ public class WebNode
 	public WebNode(URL url)
 	{
 		this.url = url;
-		this.links = new ArrayList<WebNode>();
+		this.outgoingNeighbors = new ArrayList<WebNode>();
 	}
 
 	public URL getUrl()
@@ -44,14 +47,22 @@ public class WebNode
 		this.url = url;
 	}
 
-	public ArrayList<WebNode> getLinks()
+	public ArrayList<WebNode> getOutgoingNeighbors()
 	{
-		return links;
+		return outgoingNeighbors;
 	}
 
-	public void setLinks(ArrayList<WebNode> links)
+	public void setOutgoingNeighbors(ArrayList<WebNode> links)
 	{
-		this.links = links;
+		this.outgoingNeighbors = links;
+	}
+
+	public ArrayList<WebNode> getIncomingNeighbors() {
+		return incomingNeighbors;
+	}
+
+	public void setIncomingNeighbors(ArrayList<WebNode> incomingNeighbors) {
+		this.incomingNeighbors = incomingNeighbors;
 	}
 
 	public int addLink(WebNode link)
@@ -61,14 +72,31 @@ public class WebNode
 			return -1;
 		}
 		
-		if (this.links == null)
+		if (this.outgoingNeighbors == null)
 		{
-			this.links = new ArrayList<WebNode>();
+			this.outgoingNeighbors = new ArrayList<WebNode>();
 		}
 		
-		this.links.add(link);
+		this.outgoingNeighbors.add(link);
 		
 		return 0;
 	}
+	
+	public double getAuth() {
+		return auth;
+	}
+
+	public void setAuth(double auth) {
+		this.auth = auth;
+	}
+
+	public double getHub() {
+		return hub;
+	}
+
+	public void setHub(double hub) {
+		this.hub = hub;
+	}
+
 
 }

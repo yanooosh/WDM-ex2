@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 public class WebGraph {
 
 	private ArrayList<WebNode> pages;
