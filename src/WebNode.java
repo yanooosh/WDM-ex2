@@ -97,6 +97,10 @@ public class WebNode
 	public void setHub(double hub) {
 		this.hub = hub;
 	}
-
+	
+	@Override
+	public String toString() {
+		return getUrl().toString();
+	}
 
 }

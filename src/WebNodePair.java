@@ -9,6 +9,9 @@ public class WebNodePair {
 		this.rank = rank;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return id;
+	}
 	
 }

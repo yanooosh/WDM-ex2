@@ -1,12 +1,45 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Search {
 
+	public static final int best = 5;
+	
 	public static void main(String[] args) {
 		WebGraph G = new WebGraph();
-		Hits(G);
+		PrintToFile(G.getPages(), "urls.txt");
+		ArrayList<WebNodePair> result = Hits(G);
+		PrintToFile(result, "rank.txt");
+		Scanner scanner = new Scanner(System.in);
+		while (true) {
+			System.out.println("\n < Enter Words For Search > ");
+			String words = scanner.nextLine();
+			System.out.println();
+			if (words.equals("exit")){
+				scanner.close();
+				return;
+			}
+			String[] splitWords = words.split(" ");
+			ArrayList<WebNodePair> ta = new ArrayList<>();
+		
+			// TODO: add changes for TA
+		}
+	}
 
+	private static<T> void PrintToFile(ArrayList<T> array , String filename) {
+		try{
+		PrintWriter writer = new PrintWriter(filename);
+		for (T item : array) {
+			writer.println(item.toString());
+		}
+		writer.close();
+		}
+		catch (FileNotFoundException e){
+			e.printStackTrace();
+		}
 	}
 
 	public static ArrayList<WebNodePair> Hits(WebGraph g) {
