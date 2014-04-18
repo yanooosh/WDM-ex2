@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -134,45 +135,32 @@ public class Search {
 		return prevG;
 	}
 	
-	private static List<WebNodePair> TA(int k, ArrayList<WebNodePair> ... pairs) {
+	private static List<WebNodePair> TA(int k, ArrayList<ArrayList<WebNodePair>> pairs) {
 		ArrayList<WebNodePair> list = aggregate(pairs);
 		Collections.sort(list, new WebNodePairComparator());
 		return list.subList(0, k);
 	}
 	
-	private static ArrayList<WebNodePair> aggregate(ArrayList<WebNodePair>... pairs) {
-	    if (pairs.length == 0) return new ArrayList<WebNodePair>();
-		
-	    // take minimum size 
-	    ArrayList<WebNodePair> shortest = pairs[0];
-	    for (int i = 1; i < pairs.length; i++) {
-			ArrayList<WebNodePair> shortestTmp = pairs[i];
-			if (shortestTmp.size() < shortest.size()) shortest = shortestTmp;
-			
-		}
+	private static ArrayList<WebNodePair> aggregate(ArrayList<ArrayList<WebNodePair>> pairs) {
+		int n = pairs.size();
+		if (n == 0) return new ArrayList<WebNodePair>();
+		int sizeOfEach = pairs.get(0).size();
 	    
-		double numOfArgs = pairs.length;
+		// initialize
 	    ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
-	    for (int i = 0; i < shortest.size(); ++i) {
-	    	result.add(new WebNodePair(shortest.get(i).id, 0));
+	    for (int i = 0; i < sizeOfEach; ++i) {
+	    	result.add(new WebNodePair(pairs.get(0).get(i).id, 0));
 	    }
 	    
-		for (int i = 0; i < pairs.length; ++i) {
-	        ArrayList<WebNodePair> p = pairs[i];
-	        
+		for (int i = 0; i < n; ++i) {
+	        ArrayList<WebNodePair> p = pairs.get(i);
 	        for (int j = 0; j < p.size(); j++) {
-	        	WebNodePair pair = new WebNodePair("",0);
-	        	for (WebNodePair w : p){
-	        		if (w.id.equals(result.get(j).id)){
-	        			pair = w;
-	        		}
-	        	}
-				result.get(j).rank+=pair.rank;
+				result.get(j).rank+=p.get(j).rank;
 			}
 	    }
 		
 		for (int i = 0; i < result.size(); i++){
-			result.get(i).rank/=numOfArgs; // average
+			result.get(i).rank/=n; // average
 		}
 		return result;
 	}
