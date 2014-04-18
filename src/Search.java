@@ -6,117 +6,206 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Search {
+public class Search
+{
 
+	private static final String URL_BASE = "http://simple.wikipedia.org";
+	private static final String URL_START = "http://simple.wikipedia.org/wiki/Albert_einstein";
+	private static final int MIN_WEB_PAGES = 100;
 	public static final int best = 5;
-	
-	public static void main(String[] args) {
+
+	public static void main(String[] args)
+	{
 		WebGraph G = new WebGraph();
 		InvertedIndex inverted = new InvertedIndex();
-		// TODO: crawl
+		crawl(G, inverted);
 		PrintToFile(G.getPages(), "urls.txt");
 		ArrayList<WebNodePair> result = Hits(G);
 		PrintToFile(result, "rank.txt");
 		Scanner scanner = new Scanner(System.in);
-		while (true) {
+		while (true)
+		{
 			System.out.println("\n < Enter Words For Search > ");
 			String words = scanner.nextLine();
 			System.out.println();
-			if (words.equals("exit")){
+			if (words.equals("exit"))
+			{
 				scanner.close();
 				return;
 			}
 			String[] splitWords = words.split(" ");
 			ArrayList<WebNodePair> ta = new ArrayList<>();
-		
+
 			// TODO: add changes for TA
 		}
 	}
 
-	private static<T> void PrintToFile(ArrayList<T> array , String filename) {
-		try{
-		PrintWriter writer = new PrintWriter(filename);
-		for (T item : array) {
-			writer.println(item.toString());
+	private static <T> void PrintToFile(ArrayList<T> array, String filename)
+	{
+		try
+		{
+			PrintWriter writer = new PrintWriter(filename);
+			for (T item : array)
+			{
+				writer.println(item.toString());
+			}
+			writer.close();
 		}
-		writer.close();
-		}
-		catch (FileNotFoundException e){
+		catch (FileNotFoundException e)
+		{
 			e.printStackTrace();
 		}
 	}
 
-	public static ArrayList<WebNodePair> Hits(WebGraph g) {
+	/****************************************************
+	 * * Crawl * *
+	 ****************************************************/
+	public static void crawl(WebGraph webs, InvertedIndex words)
+	{
+
+		String url = URL_START;
+		webs.addPage(new WebNode(url));
+		WebNode node = webs.getNextUnVisitedPage();
+
+		do
+		{
+
+			String page = words.getHtmlPage(url);
+			int startIndex = page.indexOf("href=\"/wiki/");
+
+			while (startIndex != -1)
+			{
+				int endIndex = getHrefEndIndex(page, startIndex);
+				String neighbourUrl = URL_BASE
+						+ page.substring(startIndex + 6, endIndex);
+
+				WebNode neighbourNode = new WebNode(neighbourUrl);
+				node.addLink(neighbourNode);
+				webs.addPage(neighbourNode);
+
+				page = page.substring(endIndex + 1);
+				startIndex = page.indexOf("href=\"/wiki/");
+			}
+
+			node = webs.getNextUnVisitedPage();
+
+		} while (node != null && webs.getPages().size() < MIN_WEB_PAGES);
+
+		for (WebNode n : webs.getPages())
+		{
+			words.addURL(n.getUrl());
+			webs.getPage(n.getUrl()).flipVisited();
+		}
+
+	}
+
+	private static int getHrefEndIndex(String page, int startIndex)
+	{
+		int i = startIndex + 7;
+
+		while (page.charAt(i) != '"')
+		{
+			i++;
+		}
+
+		return i;
+	}
+
+	/****************************************************
+	 * * HITS * *
+	 ****************************************************/
+	public static ArrayList<WebNodePair> Hits(WebGraph g)
+	{
+
 		ArrayList<WebNode> pages = g.getPages();
-		for (WebNode p : pages) {
+		for (WebNode p : pages)
+		{
 			p.auth = 1;
 			p.hub = 1;
 		}
 		HubsAndAuthorites(pages);
+
 		ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
-		for (WebNode w : pages){
+		for (WebNode w : pages)
+		{
 			result.add(new WebNodePair(w.getUrl().toString(), w.auth));
 		}
-		
+
 		Collections.sort(result, new WebNodePairComparator());
 		return result;
+
 	}
 
-	public static void HubsAndAuthorites(ArrayList<WebNode> G) {
+	public static void HubsAndAuthorites(ArrayList<WebNode> G)
+	{
 		double norm;
-		while(true){
+		while (true)
+		{
 			ArrayList<WebNode> prevG = clone(G);
-		//for (int i = 0; i < k; i++) {
+			// for (int i = 0; i < k; i++) {
 			norm = 0;
 			// update all authority values first
-			for (WebNode p : G) {
+			for (WebNode p : G)
+			{
 				p.auth = 0;
 				// p.incomingNeighbors is the set of pages that link to p
-				for (WebNode q : p.getIncomingNeighbors()) {
+				for (WebNode q : p.getIncomingNeighbors())
+				{
 					p.auth += q.hub;
 				}
-				
+
 				norm += p.auth * p.auth; // calculate the sum of the squared
 											// auth values to normalise
 			}
-			
+
 			norm = Math.sqrt(norm);
-			for (WebNode p : G) {
+			for (WebNode p : G)
+			{
 				p.auth = p.auth / norm; // normalise the auth values
 			}
-			
+
 			norm = 0;
-			for (WebNode p : G) {
+			for (WebNode p : G)
+			{
 				p.hub = 0;
-				for (WebNode r : p.getOutgoingNeighbors()) {
+				for (WebNode r : p.getOutgoingNeighbors())
+				{
 					// p.outgoingNeighbors is the set of pages that p links to
 					p.hub += r.auth;
 				}
-				
+
 				norm += p.hub * p.hub; // calculate the sum of the squared hub
 										// values to normalise
 			}
-			
+
 			norm = Math.sqrt(norm);
-			for (WebNode p : G) {
+			for (WebNode p : G)
+			{
 				p.hub = p.hub / norm;
 			}
-			if (SmallerThanEpsilon(G,prevG)) break;
+			if (SmallerThanEpsilon(G, prevG))
+				break;
 		}
 	}
 
-	
 	/*
-	 * We chose an epsilon s.t. the difference between two iterations is smaller than that number
-	 * */
-	private static boolean SmallerThanEpsilon(ArrayList<WebNode> g, ArrayList<WebNode> prevG) {
+	 * We chose an epsilon s.t. the difference between two iterations is smaller
+	 * than that number
+	 */
+	private static boolean SmallerThanEpsilon(ArrayList<WebNode> g,
+			ArrayList<WebNode> prevG)
+	{
 		boolean flag = true;
 		double epsilon = 0.0000000000001;
-		for (WebNode n : g){
+		for (WebNode n : g)
+		{
 			for (WebNode m : prevG)
 			{
-				if (n.getUrl().toString().compareTo(m.getUrl().toString()) == 0 &&
-						(Math.abs(n.auth - m.auth) >= epsilon)){
+
+				if (n.getUrl().toString().compareTo(m.getUrl().toString()) == 0
+						&& (Math.abs(n.auth - m.auth) >= epsilon))
+				{
+
 					flag = false;
 					break;
 				}
@@ -125,9 +214,11 @@ public class Search {
 		return flag;
 	}
 
-	private static ArrayList<WebNode> clone(ArrayList<WebNode> g) {
+	private static ArrayList<WebNode> clone(ArrayList<WebNode> g)
+	{
 		ArrayList<WebNode> prevG = new ArrayList<WebNode>();
-		for (WebNode p : g) {
+		for (WebNode p : g)
+		{
 			WebNode w = new WebNode(p.getUrl());
 			w.auth = p.auth;
 			w.hub = p.hub;
@@ -164,6 +255,5 @@ public class Search {
 		}
 		return result;
 	}
-	
-	
+
 }
