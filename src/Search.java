@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Search {
 
@@ -8,13 +9,20 @@ public class Search {
 
 	}
 
-	public static void Hits(WebGraph g) {
+	public static ArrayList<WebNodePair> Hits(WebGraph g) {
 		ArrayList<WebNode> pages = g.getPages();
 		for (WebNode p : pages) {
 			p.auth = 1;
 			p.hub = 1;
 		}
-		HubsAndAuthorites(pages); 
+		HubsAndAuthorites(pages);
+		ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
+		for (WebNode w : pages){
+			result.add(new WebNodePair(w.getUrl().toString(), w.auth));
+		}
+		
+		Collections.sort(result, new WebNodePairComparator());
+		return result;
 	}
 
 	public static void HubsAndAuthorites(ArrayList<WebNode> G) {
@@ -60,6 +68,10 @@ public class Search {
 		}
 	}
 
+	
+	/*
+	 * We chose an epsilon s.t. the difference between two iterations is smaller than that number
+	 * */
 	private static boolean SmallerThanEpsilon(ArrayList<WebNode> g, ArrayList<WebNode> prevG) {
 		boolean flag = true;
 		double epsilon = 0.0000000000001;
