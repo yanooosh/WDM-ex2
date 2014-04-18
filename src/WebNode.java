@@ -10,11 +10,16 @@ public class WebNode
 	private ArrayList<WebNode> incomingNeighbors; // TODO:update class
 	double auth;
 	double hub;
-
+	private boolean visited;
+	
 	public WebNode()
 	{
 		this.url = null;
 		this.outgoingNeighbors = null;
+		this.outgoingNeighbors = null;
+		//this.auth = 0;
+		//this.hub = 0;
+		visited = false;
 	}
 
 	public WebNode(String url)
@@ -23,6 +28,10 @@ public class WebNode
 		{
 			this.url = new URL(url);
 			this.outgoingNeighbors = new ArrayList<WebNode>();
+			this.outgoingNeighbors = new ArrayList<WebNode>();
+			//this.auth = 0;
+			//this.hub = 0;
+			visited = false;
 		}
 		catch (MalformedURLException e)
 		{
@@ -35,6 +44,10 @@ public class WebNode
 	{
 		this.url = url;
 		this.outgoingNeighbors = new ArrayList<WebNode>();
+		this.outgoingNeighbors = new ArrayList<WebNode>();
+		//this.auth = 0;
+		//this.hub = 0;
+		visited = false;
 	}
 
 	public URL getUrl()
@@ -67,7 +80,7 @@ public class WebNode
 
 	public int addLink(WebNode link)
 	{
-		if (this.url == null)
+		if (this.url == null || link.getUrl() == null)
 		{
 			return -1;
 		}
@@ -78,6 +91,13 @@ public class WebNode
 		}
 		
 		this.outgoingNeighbors.add(link);
+		
+		if (link.incomingNeighbors == null)
+		{
+			link.incomingNeighbors = new ArrayList<WebNode>();
+		}
+		
+		link.incomingNeighbors.add(this);
 		
 		return 0;
 	}
@@ -96,6 +116,16 @@ public class WebNode
 
 	public void setHub(double hub) {
 		this.hub = hub;
+	}
+
+	public boolean isVisited()
+	{
+		return visited;
+	}
+
+	public void flipVisited()
+	{
+		this.visited = !this.visited;
 	}
 
 

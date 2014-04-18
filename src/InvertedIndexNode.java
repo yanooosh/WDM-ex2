@@ -32,15 +32,23 @@ public class InvertedIndexNode
 			
 		}
 		
-		for (Entry<URL, Double> entry : this.pages.entrySet())
+		if (this.pages.size() == 0)
 		{
-			if (entry.getValue() < count && !isInserted)
+			newMap.put(url, count);
+		}
+		else
+		{
+		
+			for (Entry<URL, Double> entry : this.pages.entrySet())
 			{
-				newMap.put(url, count);
-				isInserted = true;
+				if (entry.getValue() < count && !isInserted)
+				{
+					newMap.put(url, count);
+					isInserted = true;
+				}
+				
+				newMap.put(entry.getKey(), entry.getValue());
 			}
-			
-			newMap.put(entry.getKey(), entry.getValue());
 		}
 		
 		this.pages = newMap;

@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.TreeMap;
 
+import org.jsoup.Jsoup;
 import org.xml.sax.InputSource;
 
 import com.sun.corba.se.spi.orbutil.fsm.Input;
@@ -37,17 +38,18 @@ public class InvertedIndex
 	
 	public void addURL(URL url)
 	{
-		String page = getPage(url);
+		String page = getPageContent(url);
 		
 		for (String word : page.split("\\s+"))
 		{
-			word = word.toLowerCase();
+/*			word = word.toLowerCase();
 			if (!words.containsKey(word))
 			{
 				addWord(word);
 			}
 			
-			this.words.get(word).addUrl(url, getRankForPage(word, page));
+			this.words.get(word).addUrl(url, getRankForPage(word, page));*/
+			addUrlToWord(url, word, page);
 		}
 	}
 	
@@ -64,10 +66,10 @@ public class InvertedIndex
 		}
 	}
 	
-	public void addUrlToWord(URL url, String word)
+	public void addUrlToWord(URL url, String word, String page)
 	{
 		double count = 0;
-		String page = getPage(url);
+		//String page = getPageContent(url);
 		word = word.toLowerCase();
 		
 		count = getRankForPage(word, page);
@@ -80,11 +82,11 @@ public class InvertedIndex
 		this.words.get(word).addUrl(url, count);
 	}
 	
-	public void addUrlToWord(String url, String word)
+	public void addUrlToWord(String url, String word, String page)
 	{
 		try
 		{
-			addUrlToWord(new URL(url), word);
+			addUrlToWord(new URL(url), word, page);
 		}
 		catch (MalformedURLException e)
 		{
@@ -93,7 +95,29 @@ public class InvertedIndex
 		}
 	}
 
-	private String getPage(URL url)
+	public String getPageContent(String url)
+	{
+		String content = "";
+		
+		try
+		{
+			content = Jsoup.connect(url).get().text();
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return content;
+	}
+	
+	public String getPageContent(URL url)
+	{
+		return getPageContent(url.toExternalForm());
+	}
+	
+	public String getHtmlPage(URL url)
 	{
 		StringBuilder output = new StringBuilder();
 		try
@@ -104,6 +128,7 @@ public class InvertedIndex
 			while (line != null)
 			{
 				output.append(line);
+				line = input.readLine();
 			}
 			
 			input.close();
@@ -116,8 +141,23 @@ public class InvertedIndex
 		}
 		return output.toString();
 	}
+	
+	public String getHtmlPage(String url)
+	{
+		String output = "";
+		try
+		{
+			output = getHtmlPage(new URL(url));
+		}
+		catch (MalformedURLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return output;
+	}
 
-	private double getRankForPage(String word, String page)
+	public double getRankForPage(String word, String page)
 	{
 
 		int countWord = 0;
@@ -132,6 +172,6 @@ public class InvertedIndex
 			countWord++;
 		}
 		
-		return countWord/countAll;
+		return ((double)(countWord))/countAll;
 	}
 }
