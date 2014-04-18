@@ -68,19 +68,23 @@ public class Search
 
 		do
 		{
-
+			words.addURL(url);
+			webs.getPage(url).flipVisited();
+			
 			String page = words.getHtmlPage(url);
 			int startIndex = page.indexOf("href=\"/wiki/");
 
 			while (startIndex != -1)
-			{
+			{				
 				int endIndex = getHrefEndIndex(page, startIndex);
-				String neighbourUrl = URL_BASE
-						+ page.substring(startIndex + 6, endIndex);
+				String neighbourUrl = URL_BASE + page.substring(startIndex + 6, endIndex);
 
-				WebNode neighbourNode = new WebNode(neighbourUrl);
-				node.addLink(neighbourNode);
-				webs.addPage(neighbourNode);
+				if (neighbourUrl.charAt(neighbourUrl.length() - 4) != '.')
+				{
+					WebNode neighbourNode = new WebNode(neighbourUrl);
+					node.addLink(neighbourNode);
+					webs.addPage(neighbourNode);	
+				}
 
 				page = page.substring(endIndex + 1);
 				startIndex = page.indexOf("href=\"/wiki/");
@@ -90,12 +94,7 @@ public class Search
 
 		} while (node != null && webs.getPages().size() < MIN_WEB_PAGES);
 
-		for (WebNode n : webs.getPages())
-		{
-			words.addURL(n.getUrl());
-			webs.getPage(n.getUrl()).flipVisited();
-		}
-
+		
 	}
 
 	private static int getHrefEndIndex(String page, int startIndex)
@@ -191,8 +190,7 @@ public class Search
 	 * We chose an epsilon s.t. the difference between two iterations is smaller
 	 * than that number
 	 */
-	private static boolean SmallerThanEpsilon(ArrayList<WebNode> g,
-			ArrayList<WebNode> prevG)
+	private static boolean SmallerThanEpsilon(ArrayList<WebNode> g, ArrayList<WebNode> prevG)
 	{
 		boolean flag = true;
 		double epsilon = 0.0000000000001;
@@ -232,8 +230,7 @@ public class Search
 		return list.subList(0, k);
 	}
 
-	private static ArrayList<WebNodePair> aggregate(
-			ArrayList<WebNodePair>... pairs)
+	private static ArrayList<WebNodePair> aggregate(ArrayList<WebNodePair>... pairs)
 	{
 		if (pairs.length == 0)
 			return new ArrayList<WebNodePair>();
@@ -248,14 +245,14 @@ public class Search
 
 		}
 
-		double numOfArgs = pairs.length;
+		int numOfArgs = pairs.length;
 		ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
-		for (int i = 0; i < shortest.size(); ++i)
+		for (int i = 0; i < shortest.size(); i++)
 		{
 			result.add(new WebNodePair(shortest.get(i).id, 0));
 		}
 
-		for (int i = 0; i < pairs.length; ++i)
+		for (int i = 0; i < pairs.length; i++)
 		{
 			ArrayList<WebNodePair> p = pairs[i];
 
