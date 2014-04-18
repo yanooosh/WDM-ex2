@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Search {
@@ -10,6 +11,8 @@ public class Search {
 	
 	public static void main(String[] args) {
 		WebGraph G = new WebGraph();
+		InvertedIndex inverted = new InvertedIndex();
+		// TODO: crawl
 		PrintToFile(G.getPages(), "urls.txt");
 		ArrayList<WebNodePair> result = Hits(G);
 		PrintToFile(result, "rank.txt");
@@ -112,8 +115,7 @@ public class Search {
 			for (WebNode m : prevG)
 			{
 				if (n.getUrl().toString().compareTo(m.getUrl().toString()) == 0 &&
-						(Math.abs(n.hub - m.hub) >= epsilon ||
-						Math.abs(n.auth - m.auth) >= epsilon)){
+						(Math.abs(n.auth - m.auth) >= epsilon)){
 					flag = false;
 					break;
 				}
@@ -131,4 +133,49 @@ public class Search {
 		}
 		return prevG;
 	}
+	
+	private static List<WebNodePair> TA(int k, ArrayList<WebNodePair> ... pairs) {
+		ArrayList<WebNodePair> list = aggregate(pairs);
+		Collections.sort(list, new WebNodePairComparator());
+		return list.subList(0, k);
+	}
+	
+	private static ArrayList<WebNodePair> aggregate(ArrayList<WebNodePair>... pairs) {
+	    if (pairs.length == 0) return new ArrayList<WebNodePair>();
+		
+	    // take minimum size 
+	    ArrayList<WebNodePair> shortest = pairs[0];
+	    for (int i = 1; i < pairs.length; i++) {
+			ArrayList<WebNodePair> shortestTmp = pairs[i];
+			if (shortestTmp.size() < shortest.size()) shortest = shortestTmp;
+			
+		}
+	    
+		double numOfArgs = pairs.length;
+	    ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
+	    for (int i = 0; i < shortest.size(); ++i) {
+	    	result.add(new WebNodePair(shortest.get(i).id, 0));
+	    }
+	    
+		for (int i = 0; i < pairs.length; ++i) {
+	        ArrayList<WebNodePair> p = pairs[i];
+	        
+	        for (int j = 0; j < p.size(); j++) {
+	        	WebNodePair pair = new WebNodePair("",0);
+	        	for (WebNodePair w : p){
+	        		if (w.id.equals(result.get(j).id)){
+	        			pair = w;
+	        		}
+	        	}
+				result.get(j).rank+=pair.rank;
+			}
+	    }
+		
+		for (int i = 0; i < result.size(); i++){
+			result.get(i).rank/=numOfArgs; // average
+		}
+		return result;
+	}
+	
+	
 }
