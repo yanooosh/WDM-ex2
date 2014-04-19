@@ -11,7 +11,7 @@ public class WebNodePair {
 	
 	@Override
 	public String toString() {
-		return id;
+		return id + " " + rank;
 	}
 	
 }

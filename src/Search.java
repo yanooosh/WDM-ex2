@@ -2,7 +2,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,36 +18,55 @@ public class Search
 		WebGraph G = new WebGraph();
 		InvertedIndex inverted = new InvertedIndex();
 		crawl(G, inverted);
-		PrintToFile(G.getPages(), "urls.txt");
-		ArrayList<WebNodePair> result = Hits(G);
-		PrintToFile(result, "rank.txt");
-		System.out.println("finished");
+		List<WebNodePair> resultHits = Hits(G);
+		PrintToFile(G.getPages(), "urls.txt", -1);
+		PrintToFile(resultHits, "rank.txt", best);
 		Scanner scanner = new Scanner(System.in);
 		while (true)
 		{
-			System.out.println("\n < Enter Words For Search > ");
-			String words = scanner.nextLine();
+			System.out.print("\nEnter Words For Search > ");
+			String input = scanner.nextLine();
 			System.out.println();
-			if (words.equals("exit"))
+			if (input.equals("exit"))
 			{
 				scanner.close();
 				return;
 			}
-			String[] splitWords = words.split(" ");
-			ArrayList<WebNodePair> ta = new ArrayList<>();
+			
+			List<WebNodePair> resultForOutput = CalcTaResult(input, G, resultHits, inverted);
+			for (int i = 0 ; i < resultForOutput.size() ; i++){
+				System.out.println(resultForOutput.get(i));
+			}
 
-			// TODO: add changes for TA
 		}
 	}
 
-	private static <T> void PrintToFile(ArrayList<T> array, String filename)
+	private static List<WebNodePair> CalcTaResult(String input, WebGraph G, List<WebNodePair> hits, InvertedIndex inverted) {
+		String[] words = input.split(" ");
+		List<List<WebNodePair>> taCategories = new ArrayList<List<WebNodePair>>();
+		taCategories.add(hits);
+		for (String word : words) {
+			List<WebNodePair> listInvertedIndex = inverted.getRanks(word, G);
+			if (listInvertedIndex.size() == 0) {
+				continue;
+			}
+			
+			taCategories.add(listInvertedIndex);
+		}
+
+		List<WebNodePair> ta = TA(best, taCategories);
+		return (ta.subList(0, Math.min(ta.size(), best)));
+	}
+
+	private static <T> void PrintToFile(List<T> array, String filename, int top)
 	{
+		int numToPrint = top == -1 ?  array.size() : top;
 		try
 		{
 			PrintWriter writer = new PrintWriter(filename);
-			for (T item : array)
+			for (int i = 0; i < numToPrint; i++)
 			{
-				writer.println(item.toString());
+				writer.println(array.get(i).toString());
 			}
 			writer.close();
 		}
@@ -114,7 +132,7 @@ public class Search
 	/****************************************************
 	 * * HITS * *
 	 ****************************************************/
-	public static ArrayList<WebNodePair> Hits(WebGraph g)
+	public static List<WebNodePair> Hits(WebGraph g)
 	{
 
 		ArrayList<WebNode> pages = g.getPages();
@@ -131,7 +149,7 @@ public class Search
 			result.add(new WebNodePair(w.getUrl().toString(), w.auth));
 		}
 
-		Collections.sort(result, new WebNodePairComparator());
+		Collections.sort(result, Collections.reverseOrder(new WebNodePairComparator()));
 		return result;
 
 	}
@@ -200,7 +218,6 @@ public class Search
 		{
 			for (WebNode m : prevG)
 			{
-
 				if (n.getUrl().toString().compareTo(m.getUrl().toString()) == 0
 						&& (Math.abs(n.auth - m.auth) >= epsilon))
 				{
@@ -225,14 +242,14 @@ public class Search
 		return prevG;
 	}
 	
-	private static List<WebNodePair> TA(int k, ArrayList<ArrayList<WebNodePair>> pairs) {
+	private static List<WebNodePair> TA(int k, List<List<WebNodePair>> pairs) {
 		ArrayList<WebNodePair> list = aggregate(pairs);
-		Collections.sort(list, new WebNodePairComparator());
+		Collections.sort(list, Collections.reverseOrder(new WebNodePairComparator()));
 		return list.subList(0, k);
 	}
 
 	
-	private static ArrayList<WebNodePair> aggregate(ArrayList<ArrayList<WebNodePair>> pairs) {
+	private static ArrayList<WebNodePair> aggregate(List<List<WebNodePair>> pairs) {
 		int n = pairs.size();
 		if (n == 0) return new ArrayList<WebNodePair>();
 		int sizeOfEach = pairs.get(0).size();
@@ -244,7 +261,7 @@ public class Search
 	    }
 	    
 		for (int i = 0; i < n; ++i) {
-	        ArrayList<WebNodePair> p = pairs.get(i);
+	        List<WebNodePair> p = pairs.get(i);
 	        for (int j = 0; j < p.size(); j++) {
 				result.get(j).rank+=p.get(j).rank;
 			}

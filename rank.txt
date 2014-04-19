@@ -1,0 +1,5 @@
+http://simple.wikipedia.org/wiki/Nobel_Prize 0.06772854614785964
+http://simple.wikipedia.org/wiki/Ulm 0.06772854614785964
+http://simple.wikipedia.org/wiki/Kingdom_of_W%C3%BCrttemberg 0.06772854614785964
+http://simple.wikipedia.org/wiki/German_Empire 0.06772854614785964
+http://simple.wikipedia.org/wiki/Princeton,_New_Jersey 0.06772854614785964

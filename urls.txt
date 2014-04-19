@@ -1,219 +1,219 @@
-http://simple.wikipedia.org/wiki/Albert_einstein
-http://simple.wikipedia.org/wiki/Nobel_Prize
-http://simple.wikipedia.org/wiki/Ulm
-http://simple.wikipedia.org/wiki/Kingdom_of_W%C3%BCrttemberg
-http://simple.wikipedia.org/wiki/German_Empire
-http://simple.wikipedia.org/wiki/Princeton,_New_Jersey
-http://simple.wikipedia.org/wiki/New_Jersey
-http://simple.wikipedia.org/wiki/Switzerland
-http://simple.wikipedia.org/wiki/Weimar_Republic
-http://simple.wikipedia.org/wiki/United_States
-http://simple.wikipedia.org/wiki/Physics
-http://simple.wikipedia.org/wiki/Bern
-http://simple.wikipedia.org/wiki/ETH_Zurich
-http://simple.wikipedia.org/wiki/Caltech
-http://simple.wikipedia.org/wiki/Leiden_University
-http://simple.wikipedia.org/wiki/Alma_mater
-http://simple.wikipedia.org/wiki/General_relativity
-http://simple.wikipedia.org/wiki/Special_relativity
-http://simple.wikipedia.org/wiki/Photoelectric_effect
-http://simple.wikipedia.org/wiki/Mass-energy_equivalence
-http://simple.wikipedia.org/wiki/Brownian_motion
-http://simple.wikipedia.org/wiki/Einstein_field_equations
-http://simple.wikipedia.org/wiki/Bose%E2%80%93Einstein_statistics
-http://simple.wikipedia.org/wiki/Bose-Einstein_condensate
-http://simple.wikipedia.org/wiki/EPR_paradox
-http://simple.wikipedia.org/wiki/Nobel_Prize_in_Physics
-http://simple.wikipedia.org/wiki/Theoretical_physics
-http://simple.wikipedia.org/wiki/Quantum_mechanics
-http://simple.wikipedia.org/wiki/Astronomy
-http://simple.wikipedia.org/wiki/Experiment
-http://simple.wikipedia.org/wiki/Observation
-http://simple.wikipedia.org/wiki/Celebrity
-http://simple.wikipedia.org/wiki/Theory
-http://simple.wikipedia.org/wiki/Light
-http://simple.wikipedia.org/wiki/Matter
-http://simple.wikipedia.org/wiki/Gravity
-http://simple.wikipedia.org/wiki/Space_(physics)
-http://simple.wikipedia.org/wiki/Time
-http://simple.wikipedia.org/wiki/Equation
-http://simple.wikipedia.org/wiki/Energy
-http://simple.wikipedia.org/wiki/Mass
-http://simple.wikipedia.org/wiki/Universities
-http://simple.wikipedia.org/wiki/World_War_II
-http://simple.wikipedia.org/wiki/Franklin_D._Roosevelt
-http://simple.wikipedia.org/wiki/Manhattan_Project
-http://simple.wikipedia.org/wiki/W%C3%BCrttemberg
-http://simple.wikipedia.org/wiki/Germany
-http://simple.wikipedia.org/wiki/Jewish
-http://simple.wikipedia.org/wiki/Judaism
-http://simple.wikipedia.org/wiki/Magnetism
-http://simple.wikipedia.org/wiki/Compass
-http://simple.wikipedia.org/wiki/Science
-http://simple.wikipedia.org/wiki/Mathematics
-http://simple.wikipedia.org/wiki/Patent
-http://simple.wikipedia.org/wiki/Serbia
-http://simple.wikipedia.org/wiki/Scarlet_fever
-http://simple.wikipedia.org/wiki/Disorder
-http://simple.wikipedia.org/wiki/Down_syndrome
-http://simple.wikipedia.org/wiki/Schizophrenia
-http://simple.wikipedia.org/wiki/Elsa_Lowenthal
-http://simple.wikipedia.org/wiki/World_War_I
-http://simple.wikipedia.org/wiki/Berlin
-http://simple.wikipedia.org/wiki/Nazi
-http://simple.wikipedia.org/wiki/Government
-http://simple.wikipedia.org/wiki/Nazis
-http://simple.wikipedia.org/wiki/Citizen
-http://simple.wikipedia.org/wiki/Atomic_bomb
-http://simple.wikipedia.org/wiki/Elie_Wiesel
-http://simple.wikipedia.org/wiki/Quantum_physics
-http://simple.wikipedia.org/wiki/Nobel_Peace_Prize
-http://simple.wikipedia.org/wiki/Speed_of_light
-http://simple.wikipedia.org/wiki/Laws_of_physics
-http://simple.wikipedia.org/wiki/Potential_energy
-http://simple.wikipedia.org/wiki/Kinetic_energy
-http://simple.wikipedia.org/wiki/Friction
-http://simple.wikipedia.org/wiki/Conservation_of_energy
-http://simple.wikipedia.org/wiki/Infinity
-http://simple.wikipedia.org/wiki/Radioactivity
-http://simple.wikipedia.org/wiki/Radium
-http://simple.wikipedia.org/wiki/Uranium
-http://simple.wikipedia.org/wiki/Krypton
-http://simple.wikipedia.org/wiki/Barium
-http://simple.wikipedia.org/wiki/Little_Boy
-http://simple.wikipedia.org/wiki/Bose_Einstein_Condensation
-http://simple.wikipedia.org/wiki/Israel_Academy_of_Sciences_and_Humanities
-http://simple.wikipedia.org/wiki/Momentum
-http://simple.wikipedia.org/wiki/Particle
-http://simple.wikipedia.org/wiki/Photon
-http://simple.wikipedia.org/wiki/Max_Planck
-http://simple.wikipedia.org/wiki/Planck_constant
-http://simple.wikipedia.org/wiki/Nuclear_power
-http://simple.wikipedia.org/wiki/World_line
-http://simple.wikipedia.org/wiki/Gravitational_lensing
-http://simple.wikipedia.org/wiki/Gravitational_wave
-http://simple.wikipedia.org/wiki/Frame-dragging
-http://simple.wikipedia.org/wiki/Event_horizon
-http://simple.wikipedia.org/wiki/Gravitational_singularity
-http://simple.wikipedia.org/wiki/Black_hole
-http://simple.wikipedia.org/wiki/Quantum_gravity
-http://simple.wikipedia.org/wiki/Hermann_Minkowski
-http://simple.wikipedia.org/wiki/Georges_Lema%C3%AEtre
-http://simple.wikipedia.org/wiki/Stephen_Hawking
-http://simple.wikipedia.org/wiki/Roger_Penrose
-http://simple.wikipedia.org/wiki/Template:General_relativity
-http://simple.wikipedia.org/wiki/Template_talk:General_relativity
-http://simple.wikipedia.org/wiki/Special_theory_of_relativity
-http://simple.wikipedia.org/wiki/Spacetime
-http://simple.wikipedia.org/wiki/Gravitation
-http://simple.wikipedia.org/wiki/Solar_eclipse
-http://simple.wikipedia.org/wiki/Cosmology
-http://simple.wikipedia.org/wiki/Universe
-http://simple.wikipedia.org/wiki/Mathematical_model
-http://simple.wikipedia.org/wiki/Big_Bang
-http://simple.wikipedia.org/wiki/Supernova
-http://simple.wikipedia.org/wiki/Politics
-http://simple.wikipedia.org/wiki/Peace
-http://simple.wikipedia.org/wiki/Socialism
-http://simple.wikipedia.org/wiki/Zionism
-http://simple.wikipedia.org/wiki/Israel
-http://simple.wikipedia.org/wiki/Religion
-http://simple.wikipedia.org/wiki/Philosopher
-http://simple.wikipedia.org/wiki/Baruch_Spinoza
-http://simple.wikipedia.org/wiki/Buddhism
-http://simple.wikipedia.org/wiki/Wikipedia:Citing_sources
-http://simple.wikipedia.org/wiki/Probability
-http://simple.wikipedia.org/wiki/Information
-http://simple.wikipedia.org/wiki/Statistical_mechanics
-http://simple.wikipedia.org/wiki/Dice
-http://simple.wikipedia.org/wiki/Unit
-http://simple.wikipedia.org/wiki/Photochemistry
-http://simple.wikipedia.org/wiki/Avogadro%27s_number
-http://simple.wikipedia.org/wiki/Einsteinium
-http://simple.wikipedia.org/wiki/Slang
-http://simple.wikipedia.org/wiki/Unified_field_theory
-http://simple.wikipedia.org/wiki/Maxwell%27s_equations
-http://simple.wikipedia.org/wiki/Special:BookSources/081269435X
-http://simple.wikipedia.org/wiki/Multimedia
-http://simple.wikipedia.org/wiki/Template:Nobel_Prize_in_Physics
-http://simple.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen
-http://simple.wikipedia.org/wiki/Hendrik_Lorentz
-http://simple.wikipedia.org/wiki/Henri_Becquerel
-http://simple.wikipedia.org/wiki/Pierre_Curie
-http://simple.wikipedia.org/wiki/Marie_Curie
-http://simple.wikipedia.org/wiki/John_William_Strutt,_3rd_Baron_Rayleigh
-http://simple.wikipedia.org/wiki/J._J._Thomson
-http://simple.wikipedia.org/wiki/Guglielmo_Marconi
-http://simple.wikipedia.org/wiki/William_Lawrence_Bragg
-http://simple.wikipedia.org/wiki/William_Henry_Bragg
-http://simple.wikipedia.org/wiki/Niels_Bohr
-http://simple.wikipedia.org/wiki/Louis_de_Broglie
-http://simple.wikipedia.org/wiki/C._V._Raman
-http://simple.wikipedia.org/wiki/Werner_Heisenberg
-http://simple.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-http://simple.wikipedia.org/wiki/Paul_Dirac
-http://simple.wikipedia.org/wiki/James_Chadwick
-http://simple.wikipedia.org/wiki/Enrico_Fermi
-http://simple.wikipedia.org/wiki/Ernest_Lawrence
-http://simple.wikipedia.org/wiki/Wolfgang_Pauli
-http://simple.wikipedia.org/wiki/Max_Born
-http://simple.wikipedia.org/wiki/John_Bardeen
-http://simple.wikipedia.org/wiki/Donald_A._Glaser
-http://simple.wikipedia.org/wiki/Richard_Feynman
-http://simple.wikipedia.org/wiki/Leo_Esaki
-http://simple.wikipedia.org/wiki/Ivar_Giaever
-http://simple.wikipedia.org/wiki/Brian_David_Josephson
-http://simple.wikipedia.org/wiki/Philip_Warren_Anderson
-http://simple.wikipedia.org/wiki/Robert_Woodrow_Wilson
-http://simple.wikipedia.org/wiki/Abdus_Salam
-http://simple.wikipedia.org/wiki/James_Cronin
-http://simple.wikipedia.org/wiki/Val_Logsdon_Fitch
-http://simple.wikipedia.org/wiki/Nicolaas_Bloembergen
-http://simple.wikipedia.org/wiki/Kenneth_G._Wilson
-http://simple.wikipedia.org/wiki/Simon_van_der_Meer
-http://simple.wikipedia.org/wiki/Heinrich_Rohrer
-http://simple.wikipedia.org/wiki/Leon_Lederman
-http://simple.wikipedia.org/wiki/Melvin_Schwartz
-http://simple.wikipedia.org/wiki/Jack_Steinberger
-http://simple.wikipedia.org/wiki/Norman_Foster_Ramsey,_Jr.
-http://simple.wikipedia.org/wiki/Hans_Georg_Dehmelt
-http://simple.wikipedia.org/wiki/Wolfgang_Paul
-http://simple.wikipedia.org/wiki/Martin_Lewis_Perl
-http://simple.wikipedia.org/wiki/Steven_Chu
-http://simple.wikipedia.org/wiki/John_C._Mather
-http://simple.wikipedia.org/wiki/George_Smoot
-http://simple.wikipedia.org/wiki/Albert_Fert
-http://simple.wikipedia.org/wiki/Peter_Gr%C3%BCnberg
-http://simple.wikipedia.org/wiki/Charles_K._Kao
-http://simple.wikipedia.org/wiki/Willard_Boyle
-http://simple.wikipedia.org/wiki/Brian_Schmidt
-http://simple.wikipedia.org/wiki/Peter_Higgs
-http://simple.wikipedia.org/wiki/Category:Nobel_Prize_in_Physics_winners
-http://simple.wikipedia.org/wiki/Special:Categories
-http://simple.wikipedia.org/wiki/Category:1879_births
-http://simple.wikipedia.org/wiki/Category:1955_deaths
-http://simple.wikipedia.org/wiki/Category:Albert_Einstein
-http://simple.wikipedia.org/wiki/Category:American_physicists
-http://simple.wikipedia.org/wiki/Category:Cardiovascular_disease_deaths_in_the_United_States
-http://simple.wikipedia.org/wiki/Category:Deaths_from_aortic_aneurysm
-http://simple.wikipedia.org/wiki/Category:German_Jews
-http://simple.wikipedia.org/wiki/Category:German_physicists
-http://simple.wikipedia.org/wiki/Category:Jewish_American_scientists
-http://simple.wikipedia.org/wiki/Category:Naturalized_citizens_of_the_United_States
-http://simple.wikipedia.org/wiki/Category:Swiss_scientists
-http://simple.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements
-http://simple.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_February_2012
-http://simple.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_February_2014
-http://simple.wikipedia.org/wiki/Albert_Einstein
-http://simple.wikipedia.org/wiki/Talk:Albert_Einstein
-http://simple.wikipedia.org/wiki/Main_Page
-http://simple.wikipedia.org/wiki/Wikipedia:Simple_start
-http://simple.wikipedia.org/wiki/Wikipedia:Simple_talk
-http://simple.wikipedia.org/wiki/Special:RecentChanges
-http://simple.wikipedia.org/wiki/Special:Random
-http://simple.wikipedia.org/wiki/Special:WhatLinksHere/Albert_Einstein
-http://simple.wikipedia.org/wiki/Special:RecentChangesLinked/Albert_Einstein
-http://simple.wikipedia.org/wiki/Special:SpecialPages
-http://simple.wikipedia.org/wiki/Wikipedia:Privacy_policy
-http://simple.wikipedia.org/wiki/Wikipedia:About
-http://simple.wikipedia.org/wiki/Wikipedia:General_disclaimer
+http://simple.wikipedia.org/wiki/Albert_einstein 0.0
+http://simple.wikipedia.org/wiki/Nobel_Prize 0.06772854614785964
+http://simple.wikipedia.org/wiki/Ulm 0.06772854614785964
+http://simple.wikipedia.org/wiki/Kingdom_of_W%C3%BCrttemberg 0.06772854614785964
+http://simple.wikipedia.org/wiki/German_Empire 0.06772854614785964
+http://simple.wikipedia.org/wiki/Princeton,_New_Jersey 0.06772854614785964
+http://simple.wikipedia.org/wiki/New_Jersey 0.06772854614785964
+http://simple.wikipedia.org/wiki/Switzerland 0.06772854614785964
+http://simple.wikipedia.org/wiki/Weimar_Republic 0.06772854614785964
+http://simple.wikipedia.org/wiki/United_States 0.06772854614785964
+http://simple.wikipedia.org/wiki/Physics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Bern 0.06772854614785964
+http://simple.wikipedia.org/wiki/ETH_Zurich 0.06772854614785964
+http://simple.wikipedia.org/wiki/Caltech 0.06772854614785964
+http://simple.wikipedia.org/wiki/Leiden_University 0.06772854614785964
+http://simple.wikipedia.org/wiki/Alma_mater 0.06772854614785964
+http://simple.wikipedia.org/wiki/General_relativity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special_relativity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Photoelectric_effect 0.06772854614785964
+http://simple.wikipedia.org/wiki/Mass-energy_equivalence 0.06772854614785964
+http://simple.wikipedia.org/wiki/Brownian_motion 0.06772854614785964
+http://simple.wikipedia.org/wiki/Einstein_field_equations 0.06772854614785964
+http://simple.wikipedia.org/wiki/Bose%E2%80%93Einstein_statistics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Bose-Einstein_condensate 0.06772854614785964
+http://simple.wikipedia.org/wiki/EPR_paradox 0.06772854614785964
+http://simple.wikipedia.org/wiki/Nobel_Prize_in_Physics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Theoretical_physics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Quantum_mechanics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Astronomy 0.06772854614785964
+http://simple.wikipedia.org/wiki/Experiment 0.06772854614785964
+http://simple.wikipedia.org/wiki/Observation 0.06772854614785964
+http://simple.wikipedia.org/wiki/Celebrity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Theory 0.06772854614785964
+http://simple.wikipedia.org/wiki/Light 0.06772854614785964
+http://simple.wikipedia.org/wiki/Matter 0.06772854614785964
+http://simple.wikipedia.org/wiki/Gravity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Space_(physics) 0.06772854614785964
+http://simple.wikipedia.org/wiki/Time 0.06772854614785964
+http://simple.wikipedia.org/wiki/Equation 0.06772854614785964
+http://simple.wikipedia.org/wiki/Energy 0.06772854614785964
+http://simple.wikipedia.org/wiki/Mass 0.06772854614785964
+http://simple.wikipedia.org/wiki/Universities 0.06772854614785964
+http://simple.wikipedia.org/wiki/World_War_II 0.06772854614785964
+http://simple.wikipedia.org/wiki/Franklin_D._Roosevelt 0.06772854614785964
+http://simple.wikipedia.org/wiki/Manhattan_Project 0.06772854614785964
+http://simple.wikipedia.org/wiki/W%C3%BCrttemberg 0.06772854614785964
+http://simple.wikipedia.org/wiki/Germany 0.06772854614785964
+http://simple.wikipedia.org/wiki/Jewish 0.06772854614785964
+http://simple.wikipedia.org/wiki/Judaism 0.06772854614785964
+http://simple.wikipedia.org/wiki/Magnetism 0.06772854614785964
+http://simple.wikipedia.org/wiki/Compass 0.06772854614785964
+http://simple.wikipedia.org/wiki/Science 0.06772854614785964
+http://simple.wikipedia.org/wiki/Mathematics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Patent 0.06772854614785964
+http://simple.wikipedia.org/wiki/Serbia 0.06772854614785964
+http://simple.wikipedia.org/wiki/Scarlet_fever 0.06772854614785964
+http://simple.wikipedia.org/wiki/Disorder 0.06772854614785964
+http://simple.wikipedia.org/wiki/Down_syndrome 0.06772854614785964
+http://simple.wikipedia.org/wiki/Schizophrenia 0.06772854614785964
+http://simple.wikipedia.org/wiki/Elsa_Lowenthal 0.06772854614785964
+http://simple.wikipedia.org/wiki/World_War_I 0.06772854614785964
+http://simple.wikipedia.org/wiki/Berlin 0.06772854614785964
+http://simple.wikipedia.org/wiki/Nazi 0.06772854614785964
+http://simple.wikipedia.org/wiki/Government 0.06772854614785964
+http://simple.wikipedia.org/wiki/Nazis 0.06772854614785964
+http://simple.wikipedia.org/wiki/Citizen 0.06772854614785964
+http://simple.wikipedia.org/wiki/Atomic_bomb 0.06772854614785964
+http://simple.wikipedia.org/wiki/Elie_Wiesel 0.06772854614785964
+http://simple.wikipedia.org/wiki/Quantum_physics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Nobel_Peace_Prize 0.06772854614785964
+http://simple.wikipedia.org/wiki/Speed_of_light 0.06772854614785964
+http://simple.wikipedia.org/wiki/Laws_of_physics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Potential_energy 0.06772854614785964
+http://simple.wikipedia.org/wiki/Kinetic_energy 0.06772854614785964
+http://simple.wikipedia.org/wiki/Friction 0.06772854614785964
+http://simple.wikipedia.org/wiki/Conservation_of_energy 0.06772854614785964
+http://simple.wikipedia.org/wiki/Infinity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Radioactivity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Radium 0.06772854614785964
+http://simple.wikipedia.org/wiki/Uranium 0.06772854614785964
+http://simple.wikipedia.org/wiki/Krypton 0.06772854614785964
+http://simple.wikipedia.org/wiki/Barium 0.06772854614785964
+http://simple.wikipedia.org/wiki/Little_Boy 0.06772854614785964
+http://simple.wikipedia.org/wiki/Bose_Einstein_Condensation 0.06772854614785964
+http://simple.wikipedia.org/wiki/Israel_Academy_of_Sciences_and_Humanities 0.06772854614785964
+http://simple.wikipedia.org/wiki/Momentum 0.06772854614785964
+http://simple.wikipedia.org/wiki/Particle 0.06772854614785964
+http://simple.wikipedia.org/wiki/Photon 0.06772854614785964
+http://simple.wikipedia.org/wiki/Max_Planck 0.06772854614785964
+http://simple.wikipedia.org/wiki/Planck_constant 0.06772854614785964
+http://simple.wikipedia.org/wiki/Nuclear_power 0.06772854614785964
+http://simple.wikipedia.org/wiki/World_line 0.06772854614785964
+http://simple.wikipedia.org/wiki/Gravitational_lensing 0.06772854614785964
+http://simple.wikipedia.org/wiki/Gravitational_wave 0.06772854614785964
+http://simple.wikipedia.org/wiki/Frame-dragging 0.06772854614785964
+http://simple.wikipedia.org/wiki/Event_horizon 0.06772854614785964
+http://simple.wikipedia.org/wiki/Gravitational_singularity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Black_hole 0.06772854614785964
+http://simple.wikipedia.org/wiki/Quantum_gravity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Hermann_Minkowski 0.06772854614785964
+http://simple.wikipedia.org/wiki/Georges_Lema%C3%AEtre 0.06772854614785964
+http://simple.wikipedia.org/wiki/Stephen_Hawking 0.06772854614785964
+http://simple.wikipedia.org/wiki/Roger_Penrose 0.06772854614785964
+http://simple.wikipedia.org/wiki/Template:General_relativity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Template_talk:General_relativity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special_theory_of_relativity 0.06772854614785964
+http://simple.wikipedia.org/wiki/Spacetime 0.06772854614785964
+http://simple.wikipedia.org/wiki/Gravitation 0.06772854614785964
+http://simple.wikipedia.org/wiki/Solar_eclipse 0.06772854614785964
+http://simple.wikipedia.org/wiki/Cosmology 0.06772854614785964
+http://simple.wikipedia.org/wiki/Universe 0.06772854614785964
+http://simple.wikipedia.org/wiki/Mathematical_model 0.06772854614785964
+http://simple.wikipedia.org/wiki/Big_Bang 0.06772854614785964
+http://simple.wikipedia.org/wiki/Supernova 0.06772854614785964
+http://simple.wikipedia.org/wiki/Politics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Peace 0.06772854614785964
+http://simple.wikipedia.org/wiki/Socialism 0.06772854614785964
+http://simple.wikipedia.org/wiki/Zionism 0.06772854614785964
+http://simple.wikipedia.org/wiki/Israel 0.06772854614785964
+http://simple.wikipedia.org/wiki/Religion 0.06772854614785964
+http://simple.wikipedia.org/wiki/Philosopher 0.06772854614785964
+http://simple.wikipedia.org/wiki/Baruch_Spinoza 0.06772854614785964
+http://simple.wikipedia.org/wiki/Buddhism 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wikipedia:Citing_sources 0.06772854614785964
+http://simple.wikipedia.org/wiki/Probability 0.06772854614785964
+http://simple.wikipedia.org/wiki/Information 0.06772854614785964
+http://simple.wikipedia.org/wiki/Statistical_mechanics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Dice 0.06772854614785964
+http://simple.wikipedia.org/wiki/Unit 0.06772854614785964
+http://simple.wikipedia.org/wiki/Photochemistry 0.06772854614785964
+http://simple.wikipedia.org/wiki/Avogadro%27s_number 0.06772854614785964
+http://simple.wikipedia.org/wiki/Einsteinium 0.06772854614785964
+http://simple.wikipedia.org/wiki/Slang 0.06772854614785964
+http://simple.wikipedia.org/wiki/Unified_field_theory 0.06772854614785964
+http://simple.wikipedia.org/wiki/Maxwell%27s_equations 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special:BookSources/081269435X 0.06772854614785964
+http://simple.wikipedia.org/wiki/Multimedia 0.06772854614785964
+http://simple.wikipedia.org/wiki/Template:Nobel_Prize_in_Physics 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen 0.06772854614785964
+http://simple.wikipedia.org/wiki/Hendrik_Lorentz 0.06772854614785964
+http://simple.wikipedia.org/wiki/Henri_Becquerel 0.06772854614785964
+http://simple.wikipedia.org/wiki/Pierre_Curie 0.06772854614785964
+http://simple.wikipedia.org/wiki/Marie_Curie 0.06772854614785964
+http://simple.wikipedia.org/wiki/John_William_Strutt,_3rd_Baron_Rayleigh 0.06772854614785964
+http://simple.wikipedia.org/wiki/J._J._Thomson 0.06772854614785964
+http://simple.wikipedia.org/wiki/Guglielmo_Marconi 0.06772854614785964
+http://simple.wikipedia.org/wiki/William_Lawrence_Bragg 0.06772854614785964
+http://simple.wikipedia.org/wiki/William_Henry_Bragg 0.06772854614785964
+http://simple.wikipedia.org/wiki/Niels_Bohr 0.06772854614785964
+http://simple.wikipedia.org/wiki/Louis_de_Broglie 0.06772854614785964
+http://simple.wikipedia.org/wiki/C._V._Raman 0.06772854614785964
+http://simple.wikipedia.org/wiki/Werner_Heisenberg 0.06772854614785964
+http://simple.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger 0.06772854614785964
+http://simple.wikipedia.org/wiki/Paul_Dirac 0.06772854614785964
+http://simple.wikipedia.org/wiki/James_Chadwick 0.06772854614785964
+http://simple.wikipedia.org/wiki/Enrico_Fermi 0.06772854614785964
+http://simple.wikipedia.org/wiki/Ernest_Lawrence 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wolfgang_Pauli 0.06772854614785964
+http://simple.wikipedia.org/wiki/Max_Born 0.06772854614785964
+http://simple.wikipedia.org/wiki/John_Bardeen 0.06772854614785964
+http://simple.wikipedia.org/wiki/Donald_A._Glaser 0.06772854614785964
+http://simple.wikipedia.org/wiki/Richard_Feynman 0.06772854614785964
+http://simple.wikipedia.org/wiki/Leo_Esaki 0.06772854614785964
+http://simple.wikipedia.org/wiki/Ivar_Giaever 0.06772854614785964
+http://simple.wikipedia.org/wiki/Brian_David_Josephson 0.06772854614785964
+http://simple.wikipedia.org/wiki/Philip_Warren_Anderson 0.06772854614785964
+http://simple.wikipedia.org/wiki/Robert_Woodrow_Wilson 0.06772854614785964
+http://simple.wikipedia.org/wiki/Abdus_Salam 0.06772854614785964
+http://simple.wikipedia.org/wiki/James_Cronin 0.06772854614785964
+http://simple.wikipedia.org/wiki/Val_Logsdon_Fitch 0.06772854614785964
+http://simple.wikipedia.org/wiki/Nicolaas_Bloembergen 0.06772854614785964
+http://simple.wikipedia.org/wiki/Kenneth_G._Wilson 0.06772854614785964
+http://simple.wikipedia.org/wiki/Simon_van_der_Meer 0.06772854614785964
+http://simple.wikipedia.org/wiki/Heinrich_Rohrer 0.06772854614785964
+http://simple.wikipedia.org/wiki/Leon_Lederman 0.06772854614785964
+http://simple.wikipedia.org/wiki/Melvin_Schwartz 0.06772854614785964
+http://simple.wikipedia.org/wiki/Jack_Steinberger 0.06772854614785964
+http://simple.wikipedia.org/wiki/Norman_Foster_Ramsey,_Jr. 0.06772854614785964
+http://simple.wikipedia.org/wiki/Hans_Georg_Dehmelt 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wolfgang_Paul 0.06772854614785964
+http://simple.wikipedia.org/wiki/Martin_Lewis_Perl 0.06772854614785964
+http://simple.wikipedia.org/wiki/Steven_Chu 0.06772854614785964
+http://simple.wikipedia.org/wiki/John_C._Mather 0.06772854614785964
+http://simple.wikipedia.org/wiki/George_Smoot 0.06772854614785964
+http://simple.wikipedia.org/wiki/Albert_Fert 0.06772854614785964
+http://simple.wikipedia.org/wiki/Peter_Gr%C3%BCnberg 0.06772854614785964
+http://simple.wikipedia.org/wiki/Charles_K._Kao 0.06772854614785964
+http://simple.wikipedia.org/wiki/Willard_Boyle 0.06772854614785964
+http://simple.wikipedia.org/wiki/Brian_Schmidt 0.06772854614785964
+http://simple.wikipedia.org/wiki/Peter_Higgs 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Nobel_Prize_in_Physics_winners 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special:Categories 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:1879_births 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:1955_deaths 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Albert_Einstein 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:American_physicists 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Cardiovascular_disease_deaths_in_the_United_States 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Deaths_from_aortic_aneurysm 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:German_Jews 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:German_physicists 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Jewish_American_scientists 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Naturalized_citizens_of_the_United_States 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Swiss_scientists 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_February_2012 0.06772854614785964
+http://simple.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_February_2014 0.06772854614785964
+http://simple.wikipedia.org/wiki/Albert_Einstein 0.06772854614785964
+http://simple.wikipedia.org/wiki/Talk:Albert_Einstein 0.06772854614785964
+http://simple.wikipedia.org/wiki/Main_Page 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wikipedia:Simple_start 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wikipedia:Simple_talk 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special:RecentChanges 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special:Random 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special:WhatLinksHere/Albert_Einstein 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special:RecentChangesLinked/Albert_Einstein 0.06772854614785964
+http://simple.wikipedia.org/wiki/Special:SpecialPages 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wikipedia:Privacy_policy 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wikipedia:About 0.06772854614785964
+http://simple.wikipedia.org/wiki/Wikipedia:General_disclaimer 0.06772854614785964

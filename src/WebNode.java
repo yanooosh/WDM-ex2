@@ -16,7 +16,7 @@ public class WebNode
 	{
 		this.url = null;
 		this.outgoingNeighbors = null;
-		this.outgoingNeighbors = null;
+		this.incomingNeighbors = null;
 		// this.auth = 0;
 		// this.hub = 0;
 		visited = false;
@@ -28,7 +28,7 @@ public class WebNode
 		{
 			this.url = new URL(url);
 			this.outgoingNeighbors = new ArrayList<WebNode>();
-			this.outgoingNeighbors = new ArrayList<WebNode>();
+			this.incomingNeighbors = new ArrayList<WebNode>();
 			// this.auth = 0;
 			// this.hub = 0;
 			visited = false;
@@ -137,7 +137,7 @@ public class WebNode
 	@Override
 	public String toString()
 	{
-		return this.getUrl().toString();
+		return this.getUrl().toString() +" "+ this.getAuth();
 	}
 
 }

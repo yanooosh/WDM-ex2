@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -239,5 +240,16 @@ public class InvertedIndex
 		 * page.substring(page.indexOf(word) + word.length()); countWord++; }
 		 */
 		return ((double) (countWord)) / countAll;
+	}
+
+	public List<WebNodePair> getRanks(String word, WebGraph g) {
+		List<WebNodePair> result = new ArrayList<WebNodePair>();
+		for (WebNode w : g.getPages()){
+			String url = w.getUrl().toString();
+			WebNodePair p = new WebNodePair(url, getRankForPage(word, url));
+			result.add(p);
+		}
+		
+		return result;
 	}
 }
