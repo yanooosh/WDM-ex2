@@ -22,6 +22,7 @@ public class Search
 		PrintToFile(G.getPages(), "urls.txt");
 		ArrayList<WebNodePair> result = Hits(G);
 		PrintToFile(result, "rank.txt");
+		System.out.println("finished");
 		Scanner scanner = new Scanner(System.in);
 		while (true)
 		{
