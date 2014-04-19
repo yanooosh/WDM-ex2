@@ -66,14 +66,19 @@ public class Search
 		String url = URL_START;
 		webs.addPage(new WebNode(url));
 		WebNode node = webs.getNextUnVisitedPage();
+		int numOfVisited = 0;
 
 		do
 		{
+			url = node.getUrl().toExternalForm();
+			
 			words.addURL(url);
-			webs.getPage(url).flipVisited();
+			node.flipVisited();
+			numOfVisited++;
 			
 			String page = words.getHtmlPage(url);
 			int startIndex = page.indexOf("href=\"/wiki/");
+			
 
 			while (startIndex != -1)
 			{				
@@ -82,9 +87,21 @@ public class Search
 
 				if (neighbourUrl.charAt(neighbourUrl.length() - 4) != '.')
 				{
-					WebNode neighbourNode = new WebNode(neighbourUrl);
-					node.addLink(neighbourNode);
-					webs.addPage(neighbourNode);	
+					if (webs.getPages().size() <= MIN_WEB_PAGES)
+					{
+						WebNode neighbourNode = new WebNode(neighbourUrl);
+						node.addLink(neighbourNode);
+						webs.addPage(neighbourNode);
+					}
+					else
+					{
+						WebNode neighbourNode = webs.getPage(neighbourUrl);
+						if (neighbourNode != null)
+						{
+							node.addLink(neighbourNode);
+						}
+					}
+						
 				}
 
 				page = page.substring(endIndex + 1);
@@ -93,7 +110,7 @@ public class Search
 
 			node = webs.getNextUnVisitedPage();
 
-		} while (node != null && webs.getPages().size() < MIN_WEB_PAGES);
+		} while (node != null);
 
 		
 	}

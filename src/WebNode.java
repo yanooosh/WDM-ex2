@@ -131,7 +131,7 @@ public class WebNode
 
 	public void flipVisited()
 	{
-		this.visited = !this.visited;
+		this.visited = true;
 	}
 
 	@Override

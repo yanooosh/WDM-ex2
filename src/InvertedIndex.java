@@ -91,7 +91,7 @@ public class InvertedIndex
 
 	public void addURL(URL url)
 	{
-		String page = getPageContent(url);
+		String page = getPageContent(url).toLowerCase();
 
 		for (String word : page.split("\\s+"))
 		{
@@ -102,8 +102,7 @@ public class InvertedIndex
 			 * this.words.get(word).addUrl(url, getRankForPage(word, page));
 			 */
 
-			if (STOP_WORDS.contains(word.toLowerCase())	|| (words.containsKey(word.toLowerCase()) && words.get(word.toLowerCase())
-							.getPages().containsKey(url)))
+			if (STOP_WORDS.contains(word) || (words.containsKey(word) && words.get(word).getPages().containsKey(url)))
 			{
 				continue;
 			}
@@ -118,7 +117,7 @@ public class InvertedIndex
 				word = word.substring(1);
 			}
 			
-			addUrlToWord(url, word, page.toLowerCase());
+			addUrlToWord(url, word, page);
 		}
 	}
 
@@ -139,14 +138,11 @@ public class InvertedIndex
 	{
 		double count = 0;
 		// String page = getPageContent(url);
-		word = word.toLowerCase();
+		//word = word.toLowerCase();
 
 		count = getRankForPage(word, page);
 
-		if (!this.words.containsKey(word))
-		{
-			addWord(word);
-		}
+		addWord(word);		
 
 		this.words.get(word).addUrl(url, count);
 	}
@@ -229,7 +225,7 @@ public class InvertedIndex
 	public double getRankForPage(String word, String page)
 	{
 		// page = page.toLowerCase();
-		word = word.toLowerCase();
+		//word = word.toLowerCase();
 
 		int countWord = Collections.frequency(Arrays.asList(page.split("\\s+")), word);
 		int countAll = page.split("\\s+").length;
