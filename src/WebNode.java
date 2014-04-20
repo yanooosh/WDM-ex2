@@ -17,8 +17,6 @@ public class WebNode
 		this.url = null;
 		this.outgoingNeighbors = null;
 		this.incomingNeighbors = null;
-		// this.auth = 0;
-		// this.hub = 0;
 		visited = false;
 	}
 
@@ -29,13 +27,10 @@ public class WebNode
 			this.url = new URL(url);
 			this.outgoingNeighbors = new ArrayList<WebNode>();
 			this.incomingNeighbors = new ArrayList<WebNode>();
-			// this.auth = 0;
-			// this.hub = 0;
 			visited = false;
 		}
 		catch (MalformedURLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -45,8 +40,6 @@ public class WebNode
 		this.url = url;
 		this.outgoingNeighbors = new ArrayList<WebNode>();
 		this.incomingNeighbors = new ArrayList<WebNode>();
-		// this.auth = 0;
-		// this.hub = 0;
 		visited = false;
 	}
 

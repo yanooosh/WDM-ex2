@@ -53,17 +53,6 @@ public class Search
 	{
 		String[] words = input.split(" ");
 		List<List<WebNodePair>> taCategories = getListIntersection(hits, inverted, words);
-		/*
-		 * taCategories.add(hits); boolean flag = false; List<WebNodePair>
-		 * listInvertedIndex; for (String word : words) { if
-		 * (inverted.getWords().containsKey(word)) { listInvertedIndex =
-		 * inverted.getWords().get(word).getPages();// inverted.getRanks(word,
-		 * // G); } else { return null; } if (listInvertedIndex.size() == 0) {
-		 * continue; } else { flag = true; }
-		 * 
-		 * taCategories.add(listInvertedIndex); }
-		 */
-
 		if (taCategories == null)
 		{
 			return null;
@@ -83,7 +72,6 @@ public class Search
 				flag = true;
 				for (WebNodePair pair : hits)
 				{
-
 					if (inverted.getWords().get(words[i]).containsPair(pair.id))
 					{
 						pair.count++;
@@ -164,16 +152,11 @@ public class Search
 		String url = URL_START;
 		webs.addPage(new WebNode(url));
 		WebNode node = webs.getNextUnVisitedPage();
-		int numOfVisited = 0;
-
 		do
 		{
 			url = node.getUrl().toExternalForm();
-
 			words.addURL(url);
 			node.flipVisited();
-			numOfVisited++;
-
 			String page = words.getHtmlPage(url);
 			int startIndex = page.indexOf("href=\"/wiki/");
 
@@ -206,7 +189,6 @@ public class Search
 			}
 
 			node = webs.getNextUnVisitedPage();
-
 		} while (node != null);
 
 	}
@@ -254,7 +236,6 @@ public class Search
 		while (true)
 		{
 			ArrayList<WebNode> prevG = clone(G);
-			// for (int i = 0; i < k; i++) {
 			norm = 0;
 			// update all authority values first
 			for (WebNode p : G)
@@ -341,6 +322,8 @@ public class Search
 	{
 		int n = pairs.get(0).size();
 		double[] taBounds = new double[n];
+		
+		// initialize TA bounds 
 		for (int i = 0; i < pairs.size(); i++)
 		{
 			for (int j = 0; j < n; j++)
@@ -359,7 +342,6 @@ public class Search
 			for (int j = 0; j < n; j++)
 			{
 				WebNodePair curr = pairs.get(i).get(j);
-				WebNodePair curragg;
 				if (result.size() < best)
 				{
 					boolean flag = false;
@@ -380,8 +362,7 @@ public class Search
 					{
 						if (curr.id.equals(w.id))
 						{
-							curragg = w;
-							result.add(curragg);
+							result.add(w);
 						}
 					}
 				}
@@ -409,8 +390,7 @@ public class Search
 						{
 							if (curr.id.equals(w.id))
 							{
-								curragg = w;
-								result.add(curragg);
+								result.add(w);
 							}
 						}
 					}
@@ -430,6 +410,10 @@ public class Search
 		return result;
 	}
 
+	
+	/*
+	 * We normalize the rank values to be in the same section and then we sum them 
+	 * */
 	private static ArrayList<WebNodePair> aggregate(List<List<WebNodePair>> pairs)
 	{
 		int n = pairs.size();
@@ -446,21 +430,14 @@ public class Search
 
 		for (int i = 0; i < n; ++i)
 		{
-			//double weight2 = 0.8 / (n - 1);
-			//double weight = i == n-1 ? 0.2 : weight2;
-
 			List<WebNodePair> p = pairs.get(i);
 			for (int j = 0; j < p.size(); j++)
 			{
 				double rank = p.get(j).rank;
-				double rank2 = rank < 0.01 ? 100 * rank : (rank < 0.1 ? 10 * rank : rank);
-				result.get(j).rank += rank2;
+				double rankNormalized = rank < 0.01 ? 100 * rank : (rank < 0.1 ? 10 * rank : rank);
+				result.get(j).rank += rankNormalized;
 			}
 		}
-		/*
-		 * for (int i = 0; i < result.size(); i++) { result.get(i).rank /= n; //
-		 * average }
-		 */
 		return result;
 	}
 

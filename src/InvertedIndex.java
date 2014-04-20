@@ -8,10 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.TreeMap;
 import java.util.Collections;
-
 import org.jsoup.Jsoup;
 
-//import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 public class InvertedIndex
 {
@@ -91,13 +89,6 @@ public class InvertedIndex
 
 		for (String word : page.split("\\s+"))
 		{
-			/*
-			 * word = word.toLowerCase(); if (!words.containsKey(word)) {
-			 * addWord(word); }
-			 * 
-			 * this.words.get(word).addUrl(url, getRankForPage(word, page));
-			 */
-
 			if (STOP_WORDS.contains(word) || (words.containsKey(word) && words.get(word).containsPair(url.toExternalForm())))
 			{
 				continue;
@@ -125,7 +116,6 @@ public class InvertedIndex
 		}
 		catch (MalformedURLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -133,13 +123,8 @@ public class InvertedIndex
 	public void addUrlToWord(URL url, String word, String page)
 	{
 		double count = 0;
-		// String page = getPageContent(url);
-		//word = word.toLowerCase();
-
 		count = getRankForPage(word, page);
-
 		addWord(word);		
-
 		this.words.get(word).addUrl(url, count);
 	}
 
@@ -151,7 +136,6 @@ public class InvertedIndex
 		}
 		catch (MalformedURLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -166,7 +150,6 @@ public class InvertedIndex
 		}
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -197,7 +180,6 @@ public class InvertedIndex
 		}
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return output.toString();
@@ -212,7 +194,6 @@ public class InvertedIndex
 		}
 		catch (MalformedURLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return output;
@@ -220,16 +201,8 @@ public class InvertedIndex
 
 	public double getRankForPage(String word, String page)
 	{
-		// page = page.toLowerCase();
-		//word = word.toLowerCase();
-
 		int countWord = Collections.frequency(Arrays.asList(page.split("\\s+")), word);
 		int countAll = page.split("\\s+").length;
-
-		/*
-		 * while (page.contains(word)) { page =
-		 * page.substring(page.indexOf(word) + word.length()); countWord++; }
-		 */
 		return ((double) (countWord)) / countAll;
 	}
 

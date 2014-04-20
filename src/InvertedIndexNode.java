@@ -1,12 +1,8 @@
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map.Entry;
 import java.util.Collections;
-
+import java.util.List;
 
 public class InvertedIndexNode
 {
@@ -20,16 +16,11 @@ public class InvertedIndexNode
 	
 	public void addUrl(URL url, double count)
 	{
-		List<WebNodePair> newMap = new ArrayList<WebNodePair>();
-		boolean isInserted = false;
-		
 		if (this.pages.contains(new WebNodePair(url.toExternalForm(), count)))
 		{
 			return;		
 		}
-		
-
-		
+				
 		this.pages.add(new WebNodePair(url.toExternalForm(), count));		
 		
 
@@ -43,14 +34,12 @@ public class InvertedIndexNode
 		}
 		catch (MalformedURLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
 	public List<WebNodePair> getPages()
 	{
-		//List<WebNodePair> list = new ArrayList<WebNodePair>();
 		Collections.sort(this.pages, Collections.reverseOrder(new WebNodePairComparator()));
 		return this.pages;
 	}
@@ -77,7 +66,6 @@ public class InvertedIndexNode
 		}
 		catch (MalformedURLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
