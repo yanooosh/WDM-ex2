@@ -1,55 +1,36 @@
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map.Entry;
-
+import java.util.Collections;
 
 
 public class InvertedIndexNode
 {
 
-	HashMap<URL, Double> pages;
+	List<WebNodePair> pages;
 	
 	public InvertedIndexNode()
 	{
-		this.pages = new LinkedHashMap<URL, Double>();
+		this.pages = new ArrayList<WebNodePair>();
 	}
 	
 	public void addUrl(URL url, double count)
 	{
-		HashMap<URL, Double> newMap = new LinkedHashMap<URL, Double>();
+		List<WebNodePair> newMap = new ArrayList<WebNodePair>();
 		boolean isInserted = false;
 		
-		if (this.pages.containsKey(url))
+		if (this.pages.contains(new WebNodePair(url.toExternalForm(), count)))
 		{
-			if (this.pages.get(url) == count)
-			{
-				return;
-			}
-			
-			this.pages.remove(url);
-			
+			return;		
 		}
 		
-		if (this.pages.size() == 0)
-		{
-			newMap.put(url, count);
-		}
-		else
-		{
+
 		
-			for (Entry<URL, Double> entry : this.pages.entrySet())
-			{
-				if (entry.getValue() < count && !isInserted)
-				{
-					newMap.put(url, count);
-					isInserted = true;
-				}
-				
-				newMap.put(entry.getKey(), entry.getValue());
-			}
-		}
+		newMap.add(new WebNodePair(url.toExternalForm(), count));		
 		
 		this.pages = newMap;
 	}
@@ -67,14 +48,23 @@ public class InvertedIndexNode
 		}
 	}
 	
-	public HashMap<URL, Double> getPages()
+	public List<WebNodePair> getPages()
 	{
+		//List<WebNodePair> list = new ArrayList<WebNodePair>();
+		Collections.sort(this.pages, Collections.reverseOrder(new WebNodePairComparator()));
 		return this.pages;
 	}
 	
 	public double getCountByURL(URL url)
 	{
-		return this.pages.get(url);
+		for (WebNodePair pair : this.pages)
+		{
+			if (pair.id.equals(url.toExternalForm()))
+			{
+				return pair.rank;
+			}
+		}
+		return -1;
 	}
 	
 	public double getCountByURL(String url)
@@ -82,7 +72,8 @@ public class InvertedIndexNode
 		double count = 0;
 		try
 		{
-			count = this.pages.get(new URL(url));
+			count = this.getCountByURL(new URL(url));
+			
 		}
 		catch (MalformedURLException e)
 		{
@@ -93,23 +84,22 @@ public class InvertedIndexNode
 		return count;
 	}
 	
-	public HashMap<URL, Double> getTopPages(int x)
+	public List<WebNodePair> getTopPages(int x)
 	{
-		int i = 1;
-		HashMap<URL, Double> newMap = new LinkedHashMap<URL, Double>();
+		List<WebNodePair> newMap = getPages();
 		
-		for (Entry<URL, Double> entry : this.pages.entrySet())
+		return newMap.subList(0, x);
+	}
+	
+	public boolean containsPair(String url)
+	{
+		for (WebNodePair pair : this.pages)
 		{
-			newMap.put(entry.getKey(), entry.getValue());
-			
-			if (i == x)
+			if (pair.id.equals(url))
 			{
-				break;
+				return true;
 			}
-			i++;
-			
 		}
-		
-		return newMap;
+		return false;
 	}
 }

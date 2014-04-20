@@ -1,5 +1,5 @@
-http://simple.wikipedia.org/wiki/Nobel_Prize 0.06772854614785964
-http://simple.wikipedia.org/wiki/Ulm 0.06772854614785964
-http://simple.wikipedia.org/wiki/Kingdom_of_W%C3%BCrttemberg 0.06772854614785964
-http://simple.wikipedia.org/wiki/German_Empire 0.06772854614785964
-http://simple.wikipedia.org/wiki/Princeton,_New_Jersey 0.06772854614785964
+http://simple.wikipedia.org/wiki/General_relativity 0.2844062031960425
+http://simple.wikipedia.org/wiki/Einstein_field_equations 0.24248243544172923
+http://simple.wikipedia.org/wiki/Special_relativity 0.23168421835087377
+http://simple.wikipedia.org/wiki/Physics 0.2222790609221519
+http://simple.wikipedia.org/wiki/Matter 0.20917550743348765

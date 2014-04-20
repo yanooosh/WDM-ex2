@@ -103,7 +103,7 @@ public class InvertedIndex
 			 * this.words.get(word).addUrl(url, getRankForPage(word, page));
 			 */
 
-			if (STOP_WORDS.contains(word) || (words.containsKey(word) && words.get(word).getPages().containsKey(url)))
+			if (STOP_WORDS.contains(word) || (words.containsKey(word) && words.get(word).containsPair(url.toExternalForm())))
 			{
 				continue;
 			}
@@ -241,9 +241,13 @@ public class InvertedIndex
 	public List<WebNodePair> getRanks(String word, WebGraph g) {
 		List<WebNodePair> result = new ArrayList<WebNodePair>();
 		for (WebNode w : g.getPages()){
-			String url = w.getUrl().toString();
-			WebNodePair p = new WebNodePair(url, getRankForPage(word, url));
-			result.add(p);
+			String url = w.getUrl().toExternalForm();
+			if (this.words.containsKey(word) && this.words.get(word).getPages().size() != 0)
+			{
+				WebNodePair p = new WebNodePair(url, this.words.get(word).getCountByURL(url));
+				result.add(p);
+			}
+			
 		}
 		
 		return result;

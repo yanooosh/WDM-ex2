@@ -1,101 +1,101 @@
-http://simple.wikipedia.org/wiki/Albert_einstein
-http://simple.wikipedia.org/wiki/Nobel_Prize
-http://simple.wikipedia.org/wiki/Ulm
-http://simple.wikipedia.org/wiki/Kingdom_of_W%C3%BCrttemberg
-http://simple.wikipedia.org/wiki/German_Empire
-http://simple.wikipedia.org/wiki/Princeton,_New_Jersey
-http://simple.wikipedia.org/wiki/New_Jersey
-http://simple.wikipedia.org/wiki/Switzerland
-http://simple.wikipedia.org/wiki/Weimar_Republic
-http://simple.wikipedia.org/wiki/United_States
-http://simple.wikipedia.org/wiki/Physics
-http://simple.wikipedia.org/wiki/Bern
-http://simple.wikipedia.org/wiki/ETH_Zurich
-http://simple.wikipedia.org/wiki/Caltech
-http://simple.wikipedia.org/wiki/Leiden_University
-http://simple.wikipedia.org/wiki/Alma_mater
-http://simple.wikipedia.org/wiki/General_relativity
-http://simple.wikipedia.org/wiki/Special_relativity
-http://simple.wikipedia.org/wiki/Photoelectric_effect
-http://simple.wikipedia.org/wiki/Mass-energy_equivalence
-http://simple.wikipedia.org/wiki/Brownian_motion
-http://simple.wikipedia.org/wiki/Einstein_field_equations
-http://simple.wikipedia.org/wiki/Bose%E2%80%93Einstein_statistics
-http://simple.wikipedia.org/wiki/Bose-Einstein_condensate
-http://simple.wikipedia.org/wiki/EPR_paradox
-http://simple.wikipedia.org/wiki/Nobel_Prize_in_Physics
-http://simple.wikipedia.org/wiki/Theoretical_physics
-http://simple.wikipedia.org/wiki/Quantum_mechanics
-http://simple.wikipedia.org/wiki/Astronomy
-http://simple.wikipedia.org/wiki/Experiment
-http://simple.wikipedia.org/wiki/Observation
-http://simple.wikipedia.org/wiki/Celebrity
-http://simple.wikipedia.org/wiki/Theory
-http://simple.wikipedia.org/wiki/Light
-http://simple.wikipedia.org/wiki/Matter
-http://simple.wikipedia.org/wiki/Gravity
-http://simple.wikipedia.org/wiki/Space_(physics)
-http://simple.wikipedia.org/wiki/Time
-http://simple.wikipedia.org/wiki/Equation
-http://simple.wikipedia.org/wiki/Energy
-http://simple.wikipedia.org/wiki/Mass
-http://simple.wikipedia.org/wiki/Universities
-http://simple.wikipedia.org/wiki/World_War_II
-http://simple.wikipedia.org/wiki/Franklin_D._Roosevelt
-http://simple.wikipedia.org/wiki/Manhattan_Project
-http://simple.wikipedia.org/wiki/W%C3%BCrttemberg
-http://simple.wikipedia.org/wiki/Germany
-http://simple.wikipedia.org/wiki/Jewish
-http://simple.wikipedia.org/wiki/Judaism
-http://simple.wikipedia.org/wiki/Magnetism
-http://simple.wikipedia.org/wiki/Compass
-http://simple.wikipedia.org/wiki/Science
-http://simple.wikipedia.org/wiki/Mathematics
-http://simple.wikipedia.org/wiki/Patent
-http://simple.wikipedia.org/wiki/Serbia
-http://simple.wikipedia.org/wiki/Scarlet_fever
-http://simple.wikipedia.org/wiki/Disorder
-http://simple.wikipedia.org/wiki/Down_syndrome
-http://simple.wikipedia.org/wiki/Schizophrenia
-http://simple.wikipedia.org/wiki/Elsa_Lowenthal
-http://simple.wikipedia.org/wiki/World_War_I
-http://simple.wikipedia.org/wiki/Berlin
-http://simple.wikipedia.org/wiki/Nazi
-http://simple.wikipedia.org/wiki/Government
-http://simple.wikipedia.org/wiki/Nazis
-http://simple.wikipedia.org/wiki/Citizen
-http://simple.wikipedia.org/wiki/Atomic_bomb
-http://simple.wikipedia.org/wiki/Elie_Wiesel
-http://simple.wikipedia.org/wiki/Quantum_physics
-http://simple.wikipedia.org/wiki/Nobel_Peace_Prize
-http://simple.wikipedia.org/wiki/Speed_of_light
-http://simple.wikipedia.org/wiki/Laws_of_physics
-http://simple.wikipedia.org/wiki/Potential_energy
-http://simple.wikipedia.org/wiki/Kinetic_energy
-http://simple.wikipedia.org/wiki/Friction
-http://simple.wikipedia.org/wiki/Conservation_of_energy
-http://simple.wikipedia.org/wiki/Infinity
-http://simple.wikipedia.org/wiki/Radioactivity
-http://simple.wikipedia.org/wiki/Radium
-http://simple.wikipedia.org/wiki/Uranium
-http://simple.wikipedia.org/wiki/Krypton
-http://simple.wikipedia.org/wiki/Barium
-http://simple.wikipedia.org/wiki/Little_Boy
-http://simple.wikipedia.org/wiki/Bose_Einstein_Condensation
-http://simple.wikipedia.org/wiki/Israel_Academy_of_Sciences_and_Humanities
-http://simple.wikipedia.org/wiki/Momentum
-http://simple.wikipedia.org/wiki/Particle
-http://simple.wikipedia.org/wiki/Photon
-http://simple.wikipedia.org/wiki/Max_Planck
-http://simple.wikipedia.org/wiki/Planck_constant
-http://simple.wikipedia.org/wiki/Nuclear_power
-http://simple.wikipedia.org/wiki/World_line
-http://simple.wikipedia.org/wiki/Gravitational_lensing
-http://simple.wikipedia.org/wiki/Gravitational_wave
-http://simple.wikipedia.org/wiki/Frame-dragging
-http://simple.wikipedia.org/wiki/Event_horizon
-http://simple.wikipedia.org/wiki/Gravitational_singularity
-http://simple.wikipedia.org/wiki/Black_hole
-http://simple.wikipedia.org/wiki/Quantum_gravity
-http://simple.wikipedia.org/wiki/Hermann_Minkowski
-http://simple.wikipedia.org/wiki/Georges_Lema%C3%AEtre
+http://simple.wikipedia.org/wiki/Albert_einstein 0.0
+http://simple.wikipedia.org/wiki/Nobel_Prize 0.08937395266255244
+http://simple.wikipedia.org/wiki/Ulm 0.03859439646004206
+http://simple.wikipedia.org/wiki/Kingdom_of_W%C3%BCrttemberg 0.06199024125932199
+http://simple.wikipedia.org/wiki/German_Empire 0.08850941094295443
+http://simple.wikipedia.org/wiki/Princeton,_New_Jersey 0.06234407565713698
+http://simple.wikipedia.org/wiki/New_Jersey 0.04113890337042704
+http://simple.wikipedia.org/wiki/Switzerland 0.07480919168774561
+http://simple.wikipedia.org/wiki/Weimar_Republic 0.05260362391204598
+http://simple.wikipedia.org/wiki/United_States 0.11545776527902137
+http://simple.wikipedia.org/wiki/Physics 0.2222790609221519
+http://simple.wikipedia.org/wiki/Bern 0.04052871256351361
+http://simple.wikipedia.org/wiki/ETH_Zurich 0.05964423478059117
+http://simple.wikipedia.org/wiki/Caltech 0.03733999151256708
+http://simple.wikipedia.org/wiki/Leiden_University 0.037572961223345205
+http://simple.wikipedia.org/wiki/Alma_mater 0.051178014730216756
+http://simple.wikipedia.org/wiki/General_relativity 0.2844062031960425
+http://simple.wikipedia.org/wiki/Special_relativity 0.23168421835087377
+http://simple.wikipedia.org/wiki/Photoelectric_effect 0.05489860183513165
+http://simple.wikipedia.org/wiki/Mass-energy_equivalence 0.039987039991591145
+http://simple.wikipedia.org/wiki/Brownian_motion 0.037807166446627107
+http://simple.wikipedia.org/wiki/Einstein_field_equations 0.24248243544172923
+http://simple.wikipedia.org/wiki/Bose%E2%80%93Einstein_statistics 0.03733999151256708
+http://simple.wikipedia.org/wiki/Bose-Einstein_condensate 0.03733999151256708
+http://simple.wikipedia.org/wiki/EPR_paradox 0.03815547857468756
+http://simple.wikipedia.org/wiki/Nobel_Prize_in_Physics 0.1384531887356837
+http://simple.wikipedia.org/wiki/Theoretical_physics 0.04310388771365238
+http://simple.wikipedia.org/wiki/Quantum_mechanics 0.18672979317695437
+http://simple.wikipedia.org/wiki/Astronomy 0.10429677010546652
+http://simple.wikipedia.org/wiki/Experiment 0.06776590989098347
+http://simple.wikipedia.org/wiki/Observation 0.04453156688166161
+http://simple.wikipedia.org/wiki/Celebrity 0.03781618010439561
+http://simple.wikipedia.org/wiki/Theory 0.08017833754879503
+http://simple.wikipedia.org/wiki/Light 0.1541268796359791
+http://simple.wikipedia.org/wiki/Matter 0.20917550743348765
+http://simple.wikipedia.org/wiki/Gravity 0.18361321186491267
+http://simple.wikipedia.org/wiki/Space_(physics) 0.11822250326519185
+http://simple.wikipedia.org/wiki/Time 0.14380203784201812
+http://simple.wikipedia.org/wiki/Equation 0.06588395343079007
+http://simple.wikipedia.org/wiki/Energy 0.12640244959876093
+http://simple.wikipedia.org/wiki/Mass 0.16172226285214605
+http://simple.wikipedia.org/wiki/Universities 0.03733999151256708
+http://simple.wikipedia.org/wiki/World_War_II 0.07925291775692565
+http://simple.wikipedia.org/wiki/Franklin_D._Roosevelt 0.06152186785112984
+http://simple.wikipedia.org/wiki/Manhattan_Project 0.0620477146528076
+http://simple.wikipedia.org/wiki/W%C3%BCrttemberg 0.03733999151256708
+http://simple.wikipedia.org/wiki/Germany 0.08873288906802998
+http://simple.wikipedia.org/wiki/Jewish 0.03872107056583029
+http://simple.wikipedia.org/wiki/Judaism 0.04301516903937805
+http://simple.wikipedia.org/wiki/Magnetism 0.07515208913413701
+http://simple.wikipedia.org/wiki/Compass 0.03868333437729176
+http://simple.wikipedia.org/wiki/Science 0.11844136885453778
+http://simple.wikipedia.org/wiki/Mathematics 0.10313295360236387
+http://simple.wikipedia.org/wiki/Patent 0.0375729612233452
+http://simple.wikipedia.org/wiki/Serbia 0.051595476938045025
+http://simple.wikipedia.org/wiki/Scarlet_fever 0.0375729612233452
+http://simple.wikipedia.org/wiki/Disorder 0.03733999151256708
+http://simple.wikipedia.org/wiki/Down_syndrome 0.0375729612233452
+http://simple.wikipedia.org/wiki/Schizophrenia 0.0379331402310868
+http://simple.wikipedia.org/wiki/Elsa_Lowenthal 0.03733999151256708
+http://simple.wikipedia.org/wiki/World_War_I 0.058284442862626636
+http://simple.wikipedia.org/wiki/Berlin 0.06122915971380439
+http://simple.wikipedia.org/wiki/Nazi 0.0620557183189906
+http://simple.wikipedia.org/wiki/Government 0.07796542240435014
+http://simple.wikipedia.org/wiki/Nazis 0.05938018469918953
+http://simple.wikipedia.org/wiki/Citizen 0.037519005708819636
+http://simple.wikipedia.org/wiki/Atomic_bomb 0.04002765992211433
+http://simple.wikipedia.org/wiki/Elie_Wiesel 0.03797256308859456
+http://simple.wikipedia.org/wiki/Quantum_physics 0.056279993018712546
+http://simple.wikipedia.org/wiki/Speed_of_light 0.09991683932134832
+http://simple.wikipedia.org/wiki/Laws_of_physics 0.03733999151256708
+http://simple.wikipedia.org/wiki/Potential_energy 0.04408783524342683
+http://simple.wikipedia.org/wiki/Kinetic_energy 0.06082986290578892
+http://simple.wikipedia.org/wiki/Friction 0.049990581073506464
+http://simple.wikipedia.org/wiki/Conservation_of_energy 0.05158539652179477
+http://simple.wikipedia.org/wiki/Infinity 0.042476517432840075
+http://simple.wikipedia.org/wiki/Radioactivity 0.05553205277156242
+http://simple.wikipedia.org/wiki/Radium 0.04416393575890637
+http://simple.wikipedia.org/wiki/Uranium 0.047666596357173165
+http://simple.wikipedia.org/wiki/Krypton 0.04090417497855209
+http://simple.wikipedia.org/wiki/Barium 0.041677204564250676
+http://simple.wikipedia.org/wiki/Little_Boy 0.03830524478384204
+http://simple.wikipedia.org/wiki/Bose_Einstein_Condensation 0.03733999151256708
+http://simple.wikipedia.org/wiki/Israel_Academy_of_Sciences_and_Humanities 0.0375729612233452
+http://simple.wikipedia.org/wiki/Momentum 0.07902775704087908
+http://simple.wikipedia.org/wiki/Particle 0.07507603473718777
+http://simple.wikipedia.org/wiki/Photon 0.12184219930470322
+http://simple.wikipedia.org/wiki/Max_Planck 0.17030492741466427
+http://simple.wikipedia.org/wiki/Planck_constant 0.049814002187619666
+http://simple.wikipedia.org/wiki/Nuclear_power 0.03816245841990399
+http://simple.wikipedia.org/wiki/World_line 0.1239726139772308
+http://simple.wikipedia.org/wiki/Gravitational_lensing 0.13143895872143996
+http://simple.wikipedia.org/wiki/Gravitational_wave 0.1288760320874823
+http://simple.wikipedia.org/wiki/Frame-dragging 0.12490574063606254
+http://simple.wikipedia.org/wiki/Event_horizon 0.15741368997605593
+http://simple.wikipedia.org/wiki/Gravitational_singularity 0.16042186118524632
+http://simple.wikipedia.org/wiki/Black_hole 0.19742748413383712
+http://simple.wikipedia.org/wiki/Quantum_gravity 0.13007614563509864
+http://simple.wikipedia.org/wiki/Hermann_Minkowski 0.12250413847125814
+http://simple.wikipedia.org/wiki/Georges_Lema%C3%AEtre 0.1227909268419553
+http://simple.wikipedia.org/wiki/Stephen_Hawking 0.15891284925702137
