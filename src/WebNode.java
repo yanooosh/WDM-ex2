@@ -44,7 +44,7 @@ public class WebNode
 	{
 		this.url = url;
 		this.outgoingNeighbors = new ArrayList<WebNode>();
-		this.outgoingNeighbors = new ArrayList<WebNode>();
+		this.incomingNeighbors = new ArrayList<WebNode>();
 		// this.auth = 0;
 		// this.hub = 0;
 		visited = false;

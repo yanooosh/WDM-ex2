@@ -285,9 +285,49 @@ public class Search
 
 	private static List<WebNodePair> TA(int k, List<List<WebNodePair>> pairs)
 	{
-		ArrayList<WebNodePair> list = aggregate(pairs);
-		Collections.sort(list, Collections.reverseOrder(new WebNodePairComparator()));
-		return list.subList(0, k);
+		int n = pairs.get(0).size();
+		double[] taBounds = new double[n];
+		for (int i = 0; i < pairs.size(); i++){
+			for (int j = 0; j < n; j++){
+				double rank = pairs.get(i).get(j).rank;
+				taBounds[i] += rank < 0.01 ? 100.0f*rank : (rank < 0.1 ? 10.0f*rank : rank); 
+			}
+		}
+		
+		ArrayList<WebNodePair> aggList = aggregate(pairs);
+		ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
+		int count;
+		for (int i = 0; i < pairs.size(); i++) {
+			count = 0;
+			for (int j = 0; j < n; j++) {
+				WebNodePair curr = pairs.get(i).get(j);
+				WebNodePair curragg;
+				if (result.size() < best) {
+					result.add(curr);
+				} else {
+					Collections.sort(result, Collections
+							.reverseOrder(new WebNodePairComparator()));
+					if (result.get(result.size() - 1).rank < curr.rank) {
+						result.remove(result.size() - 1);
+						for (WebNodePair w : aggList) {
+							if (curr.id.equals(w.id) ){
+								curragg = w;
+								result.add(curragg);
+							}
+						}
+					}
+				}
+			}
+			
+			for (WebNodePair w : result){
+				if (w.rank > taBounds[i]) count ++;
+			}
+			if (count == best) break;
+
+		}
+
+		Collections.sort(result, Collections.reverseOrder(new WebNodePairComparator()));
+		return result;
 	}
 
 	private static ArrayList<WebNodePair> aggregate(List<List<WebNodePair>> pairs)
@@ -306,17 +346,19 @@ public class Search
 
 		for (int i = 0; i < n; ++i)
 		{
+			double weight2 = 0.8/(pairs.size() - 1);
+			double weight = i == 0 ? 0.2 : weight2*1000;
 			List<WebNodePair> p = pairs.get(i);
 			for (int j = 0; j < p.size(); j++)
 			{
-				result.get(j).rank += p.get(j).rank;
+				result.get(j).rank += weight * p.get(j).rank;
 			}
 		}
-
+/*
 		for (int i = 0; i < result.size(); i++)
 		{
 			result.get(i).rank /= n; // average
-		}
+		}*/
 		return result;
 	}
 
