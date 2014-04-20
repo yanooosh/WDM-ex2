@@ -112,13 +112,28 @@ public class Search
 				newHits.add(pair);
 				for (int i = 0; i < words.length; i++)
 				{
-					newByName.get(i).add(
-							new WebNodePair(pair.id, inverted.getWords().get(words[i]).getCountByURL(pair.id)));
+					if (inverted.getWords().get(words[i]).getCountByURL(pair.id) != -1)
+					{
+						newByName.get(i).add(
+								new WebNodePair(pair.id, inverted.getWords().get(words[i]).getCountByURL(pair.id)));
+
+					}
 				}
 			}
 		}
 
+		for (WebNodePair pair : hits)
+		{
+			pair.count = 0;
+		}
+
 		newByName.add(newHits);
+
+		for (List<WebNodePair> list : newByName)
+		{
+			Collections.sort(list, Collections.reverseOrder(new WebNodePairComparator()));
+		}
+
 		return newByName;
 	}
 
@@ -325,43 +340,89 @@ public class Search
 	private static List<WebNodePair> TA(int k, List<List<WebNodePair>> pairs)
 	{
 		int n = pairs.get(0).size();
-		double[] taBounds = new double[pairs.size()];
-		for (int i = 0; i < pairs.size(); i++){
-			for (int j = 0; j < n; j++){
+		double[] taBounds = new double[n];
+		for (int i = 0; i < pairs.size(); i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
 				double rank = pairs.get(i).get(j).rank;
-				taBounds[i] += rank;//; < 0.01 ? 100.0f*rank : (rank < 0.1 ? 10.0f*rank : rank); 
+				taBounds[j] += rank < 0.01 ? 100 * rank : (rank < 0.1 ? 10 * rank : rank);
 			}
 		}
-		
+
 		ArrayList<WebNodePair> aggList = aggregate(pairs);
 		ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
 		int count;
-		for (int i = 0; i < pairs.size(); i++) {
+		for (int i = 0; i < pairs.size(); i++)
+		{
 			count = 0;
-			for (int j = 0; j < n; j++) {
+			for (int j = 0; j < n; j++)
+			{
 				WebNodePair curr = pairs.get(i).get(j);
 				WebNodePair curragg;
-				if (result.size() < best) {
-					result.add(curr);
-				} else {
-					Collections.sort(result, Collections
-							.reverseOrder(new WebNodePairComparator()));
-					if (result.get(result.size() - 1).rank < curr.rank) {
+				if (result.size() < best)
+				{
+					boolean flag = false;
+					for (WebNodePair p : result)
+					{
+						if (p.id.equals(curr.id))
+						{
+							flag = true;
+							break;
+						}
+
+					}
+					if (flag)
+					{
+						continue;
+					}
+					for (WebNodePair w : aggList)
+					{
+						if (curr.id.equals(w.id))
+						{
+							curragg = w;
+							result.add(curragg);
+						}
+					}
+				}
+				else
+				{
+					Collections.sort(result, Collections.reverseOrder(new WebNodePairComparator()));
+					if (result.get(result.size() - 1).rank < curr.rank)
+					{
+						boolean flag = false;
+						for (WebNodePair p : result)
+						{
+							if (p.id.equals(curr.id))
+							{
+								flag = true;
+								break;
+							}
+
+						}
+						if (flag)
+						{
+							continue;
+						}
 						result.remove(result.size() - 1);
-						for (WebNodePair w : aggList) {
-							if (curr.id.equals(w.id) ){
+						for (WebNodePair w : aggList)
+						{
+							if (curr.id.equals(w.id))
+							{
 								curragg = w;
 								result.add(curragg);
 							}
 						}
 					}
 				}
+				for (WebNodePair w : result)
+				{
+					if (w.rank > taBounds[j])
+						count++;
+				}
+				if (count == best)
+					break;
 			}
-			
-			for (WebNodePair w : result){
-				if (w.rank > taBounds[i]) count ++;
-			}
-			if (count == best) break;
 
 		}
 
@@ -385,22 +446,21 @@ public class Search
 
 		for (int i = 0; i < n; ++i)
 		{
-			double weight2 = 0.8/(pairs.size() - 1);
-			double weight = i == 0 ? 0.2 : weight2;
-			
+			//double weight2 = 0.8 / (n - 1);
+			//double weight = i == n-1 ? 0.2 : weight2;
+
 			List<WebNodePair> p = pairs.get(i);
 			for (int j = 0; j < p.size(); j++)
 			{
 				double rank = p.get(j).rank;
-				double rank2 = rank < 0.01 ? 100.0f*rank : (rank < 0.1 ? 10.0f*rank : rank); 
-				result.get(j).rank += rank;//weight * rank2;
+				double rank2 = rank < 0.01 ? 100 * rank : (rank < 0.1 ? 10 * rank : rank);
+				result.get(j).rank += rank2;
 			}
 		}
-/*
-		for (int i = 0; i < result.size(); i++)
-		{
-			result.get(i).rank /= n; // average
-		}*/
+		/*
+		 * for (int i = 0; i < result.size(); i++) { result.get(i).rank /= n; //
+		 * average }
+		 */
 		return result;
 	}
 

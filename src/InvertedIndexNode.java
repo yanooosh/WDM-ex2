@@ -30,9 +30,9 @@ public class InvertedIndexNode
 		
 
 		
-		newMap.add(new WebNodePair(url.toExternalForm(), count));		
+		this.pages.add(new WebNodePair(url.toExternalForm(), count));		
 		
-		this.pages = newMap;
+
 	}
 	
 	public void addUrl(String url, double count)
