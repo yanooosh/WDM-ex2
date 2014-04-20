@@ -325,11 +325,11 @@ public class Search
 	private static List<WebNodePair> TA(int k, List<List<WebNodePair>> pairs)
 	{
 		int n = pairs.get(0).size();
-		double[] taBounds = new double[n];
+		double[] taBounds = new double[pairs.size()];
 		for (int i = 0; i < pairs.size(); i++){
 			for (int j = 0; j < n; j++){
 				double rank = pairs.get(i).get(j).rank;
-				taBounds[i] += rank < 0.01 ? 100.0f*rank : (rank < 0.1 ? 10.0f*rank : rank); 
+				taBounds[i] += rank;//; < 0.01 ? 100.0f*rank : (rank < 0.1 ? 10.0f*rank : rank); 
 			}
 		}
 		
@@ -386,11 +386,14 @@ public class Search
 		for (int i = 0; i < n; ++i)
 		{
 			double weight2 = 0.8/(pairs.size() - 1);
-			double weight = i == 0 ? 0.2 : weight2*1000;
+			double weight = i == 0 ? 0.2 : weight2;
+			
 			List<WebNodePair> p = pairs.get(i);
 			for (int j = 0; j < p.size(); j++)
 			{
-				result.get(j).rank += weight * p.get(j).rank;
+				double rank = p.get(j).rank;
+				double rank2 = rank < 0.01 ? 100.0f*rank : (rank < 0.1 ? 10.0f*rank : rank); 
+				result.get(j).rank += rank;//weight * rank2;
 			}
 		}
 /*
