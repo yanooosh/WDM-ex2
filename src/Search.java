@@ -52,35 +52,74 @@ public class Search
 			InvertedIndex inverted)
 	{
 		String[] words = input.split(" ");
-		List<List<WebNodePair>> taCategories = new ArrayList<List<WebNodePair>>();
-		taCategories.add(hits);
-		boolean flag = false;
-		List<WebNodePair> listInvertedIndex;
-		for (String word : words)
+		List<List<WebNodePair>> taCategories = getListIntersection(hits, inverted, words);
+		/*
+		 * taCategories.add(hits); boolean flag = false; List<WebNodePair>
+		 * listInvertedIndex; for (String word : words) { if
+		 * (inverted.getWords().containsKey(word)) { listInvertedIndex =
+		 * inverted.getWords().get(word).getPages();// inverted.getRanks(word,
+		 * // G); } else { return null; } if (listInvertedIndex.size() == 0) {
+		 * continue; } else { flag = true; }
+		 * 
+		 * taCategories.add(listInvertedIndex); }
+		 */
+
+		if (taCategories == null)
 		{
-			if (inverted.getWords().containsKey(word))
-			{
-				listInvertedIndex = inverted.getWords().get(word).getPages();// inverted.getRanks(word,
-																								// G);
-			}
-			else
-			{
-				return null;
-			}
-			if (listInvertedIndex.size() == 0)
-			{
-				continue;
-			}
-			else
+			return null;
+		}
+		List<WebNodePair> ta = TA(best, taCategories);
+		return ta.subList(0, Math.min(ta.size(), best));
+	}
+
+	private static List<List<WebNodePair>> getListIntersection(List<WebNodePair> hits, InvertedIndex inverted,
+			String[] words)
+	{
+		boolean flag = false;
+		for (int i = 0; i < words.length; i++)
+		{
+			if (inverted.getWords().containsKey(words[i]))
 			{
 				flag = true;
-			}
+				for (WebNodePair pair : hits)
+				{
 
-			taCategories.add(listInvertedIndex);
+					if (inverted.getWords().get(words[i]).containsPair(pair.id))
+					{
+						pair.count++;
+					}
+				}
+			}
 		}
 
-		List<WebNodePair> ta = TA(best, taCategories);
-		return flag == true ? (ta.subList(0, Math.min(ta.size(), best))) : null;
+		if (!flag)
+		{
+			return null;
+		}
+
+		List<WebNodePair> newHits = new ArrayList<WebNodePair>();
+		List<List<WebNodePair>> newByName = new ArrayList<List<WebNodePair>>();
+
+		for (int i = 0; i < words.length; i++)
+		{
+			newByName.add(new ArrayList<WebNodePair>());
+		}
+
+		for (WebNodePair pair : hits)
+		{
+			if (pair.count == words.length)
+			{
+				newHits.add(pair);
+				for (int i = 0; i < words.length; i++)
+				{
+					newByName.get(i).add(
+							new WebNodePair(pair.id, inverted.getWords().get(words[i]).getCountByURL(pair.id)));
+				}
+			}
+		}
+
+		newByName.add(newHits);
+		return newByName;
 	}
 
 	private static <T> void PrintToFile(List<T> array, String filename, int top)
