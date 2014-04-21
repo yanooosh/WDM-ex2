@@ -1,5 +1,5 @@
-http://simple.wikipedia.org/wiki/General_relativity 0.2844062031960425
-http://simple.wikipedia.org/wiki/Einstein_field_equations 0.24248243544172923
-http://simple.wikipedia.org/wiki/Special_relativity 0.23168421835087377
-http://simple.wikipedia.org/wiki/Physics 0.2222790609221519
-http://simple.wikipedia.org/wiki/Matter 0.20917550743348765
+http://simple.wikipedia.org/wiki/General_relativity
+http://simple.wikipedia.org/wiki/Einstein_field_equations
+http://simple.wikipedia.org/wiki/Special_relativity
+http://simple.wikipedia.org/wiki/Physics
+http://simple.wikipedia.org/wiki/Matter

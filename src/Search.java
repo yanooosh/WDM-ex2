@@ -336,10 +336,10 @@ public class Search
 		ArrayList<WebNodePair> aggList = aggregate(pairs);
 		ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
 		int count;
-		for (int i = 0; i < pairs.size(); i++)
+		for (int j = 0; j < n; j++)
 		{
 			count = 0;
-			for (int j = 0; j < n; j++)
+			for (int i = 0; i < pairs.size(); i++)
 			{
 				WebNodePair curr = pairs.get(i).get(j);
 				if (result.size() < best)
@@ -412,7 +412,10 @@ public class Search
 
 	
 	/*
-	 * We normalize the rank values to be in the same section and then we sum them 
+	 * Aggregate Function:
+	 * We normalize the rank values to be in the same section, and then we sum them 
+	 * This way for example the HITS results won't be the only factor that influence the results,
+	 * because the numerical values of the HITS are much bigger than the words ranks
 	 * */
 	private static ArrayList<WebNodePair> aggregate(List<List<WebNodePair>> pairs)
 	{
