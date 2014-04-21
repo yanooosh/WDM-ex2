@@ -130,7 +130,7 @@ public class WebNode
 	@Override
 	public String toString()
 	{
-		return this.getUrl().toString() +" "+ this.getAuth();
+		return this.getUrl().toString();
 	}
 
 }

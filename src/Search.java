@@ -416,6 +416,9 @@ public class Search
 	 * */
 	private static ArrayList<WebNodePair> aggregate(List<List<WebNodePair>> pairs)
 	{
+		for (List<WebNodePair> list : pairs){
+			Collections.sort(list, new WebNodePairComparatorById());
+		}
 		int n = pairs.size();
 		if (n == 0)
 			return new ArrayList<WebNodePair>();
@@ -423,12 +426,12 @@ public class Search
 
 		// initialize
 		ArrayList<WebNodePair> result = new ArrayList<WebNodePair>();
-		for (int i = 0; i < sizeOfEach; ++i)
+		for (int i = 0; i < sizeOfEach; i++)
 		{
 			result.add(new WebNodePair(pairs.get(0).get(i).id, 0));
 		}
 
-		for (int i = 0; i < n; ++i)
+		for (int i = 0; i < n; i++)
 		{
 			List<WebNodePair> p = pairs.get(i);
 			for (int j = 0; j < p.size(); j++)
@@ -437,6 +440,9 @@ public class Search
 				double rankNormalized = rank < 0.01 ? 100 * rank : (rank < 0.1 ? 10 * rank : rank);
 				result.get(j).rank += rankNormalized;
 			}
+		}
+		for (List<WebNodePair> list : pairs){
+			Collections.sort(list, Collections.reverseOrder(new WebNodePairComparator()));
 		}
 		return result;
 	}

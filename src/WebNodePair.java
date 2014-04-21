@@ -13,7 +13,7 @@ public class WebNodePair {
 	
 	@Override
 	public String toString() {
-		return id + " " + rank;
+		return id;
 	}
 	
 }
